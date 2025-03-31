@@ -1,0 +1,355 @@
+/* 📲 Móviles (menos de 768px) */
+@media (max-width: 768px) {
+    .social-media {
+        display: flex;
+        color: black;
+    }
+
+    .social-media a {
+        font-size: 2.5rem;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
+    .social-media span {
+        display: none;
+    }
+
+    .user-cart-icons {
+        display: flex;
+    }
+
+    .user-cart-icons a {
+        font-size: 2rem;
+        padding: 1rem;
+        color: #000000;
+        padding-bottom: 0;
+    }
+
+    .user-cart-icons span {
+        display: none;
+    }
+
+    .principal-content {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+    }
+
+    .principal-menu {
+        background-color: #6A0DAD;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        padding: 1rem;
+    }
+
+    .list {
+        display: none;
+        background-color: #39D353;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+    }
+
+    .list ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .list li {
+        list-style: none;
+        padding: 1rem;
+        border-bottom: #000000 1px solid;
+        font-weight: bold;
+        font-size: medium;
+        color: black;
+    }
+
+    .list.open {
+        display: block;
+        transform: translateY(0);
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    /* Quita el borde de los elementos dentro del dropdown */
+    .dropdown-menu li {
+        border-bottom: none;
+        border-top: #000000 1px solid;
+        background-color: white;
+
+    }
+    
+    
+
+
+    
+
+
+}
+
+/*======================================================================*/
+
+/* 📱 Tablets (de 768px a 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbarGames {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #6A0DAD;
+        height: 100vh;
+        position: relative;
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .user-cart-icons {
+        display: none;
+    }
+
+    /* 🔹 Botón de menú */
+    .menu-toggle {
+        margin: 1rem;
+        position: relative;
+        background: white;
+        border: none;
+        border-radius: 8%;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        z-index: 1001;
+        font-size: 35px;
+    }
+
+    /* 🔹 Menú desplegable */
+    .list {
+        display: none;
+        width: 200px;
+        background-color: #39D353;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+        transform: translateY(-10px);
+        opacity: 0;
+        margin-left: 1rem;
+    }
+
+    /* 🔹 Cuando el menú está abierto */
+    .list.open {
+        display: block;
+        transform: translateY(0);
+        opacity: 1;
+        width: 250px;
+        margin: 1rem;
+        margin-top: 0;
+    }
+
+    /* 🔹 Estilos de los elementos del menú */
+    .list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .list li {
+        padding: 1rem;
+        text-align: left;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        transition: background 0.3s;
+        border-bottom: #ffffff 1px solid;
+        font-size: large;
+
+    }
+
+    /* Quita el borde de los elementos dentro del dropdown */
+    .dropdown-menu li {
+        border-bottom: none;
+        border-top: #000000 1px solid;
+        background-color: white;
+        
+    }
+
+}
+
+/*======================================================================*/
+
+
+/* 🌍 Pantallas grandes (PC y monitores grandes) */
+@media (min-width: 1200px) {
+    .navbarGames {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .principal-content {
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-media {
+        padding: 1rem;
+        align-items: center;
+        display: flex;
+
+    }
+
+    .social-media a {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .social-media span {
+        color: black;
+    }
+
+
+    .social-icons a:hover {
+        color: #e1306c;
+        /* Color de Instagram */
+    }
+
+    .user-cart-icons {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .user-cart-icons a {
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    .user-cart-icons span {
+        color: black;
+    }
+
+    .principal-menu {
+        background-color: #6A0DAD;
+        width: 100%;
+        height: 60.8px;
+        display: flex;
+        gap: 60px;
+        justify-content: center;
+
+    }
+
+    .brand {
+        width: 20%;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+    }
+
+    .list ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* Asegura que el menú ocupe todo el ancho */
+        padding: 0;
+        list-style: none;
+        align-items: center;
+
+    }
+
+    .list li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+        margin: 0;
+        font-size: larger;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        border-bottom: none;
+        position: relative;
+        border-bottom: none;
+        box-sizing: border-box;
+        /* ✅ Evita que el padding afecte el tamaño */
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .list li:hover {
+        background-color: #39D353;
+        transform: translateY(0);
+        /* ✅ Evita que se mueva */
+    }
+
+    /* 🔽 Dropdown */
+    .dropdown {
+        position: relative;
+        padding: 0;
+        /* Para que el menú desplegable se posicione correctamente */
+    }
+
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        /* Hace que el menú aparezca justo debajo */
+        left: 0;
+        background-color: #39D353;
+        /* Ajusta el fondo si es necesario */
+        width: max-content;
+        /* Para que solo ocupe el espacio necesario */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Efecto de sombra */
+        z-index: 1000;
+        /* Asegura que esté sobre otros elementos */
+        
+    }
+
+    .dropdown-menu li {
+        justify-content: left;
+        gap: 3px;
+        font-size: large;
+    }
+
+    .dropdown-menu a {
+        text-decoration: none;
+        color: white;
+      }
+
+    .dropdown-menu li:hover {
+        background-color: #6A0DAD;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown ul {
+        padding: 0;
+    }
+
+
+
+
+
+}
