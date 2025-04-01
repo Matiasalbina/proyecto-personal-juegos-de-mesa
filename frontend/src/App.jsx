@@ -3,18 +3,28 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavbarGames from "./components/NavbarGames";
 import EuroGames from "./views/generalviews/EuroGames";
 import Familiares from "./views/generalviews/Familiares";
+import Home from "./views/generalviews/Home";
+import CarouselGames from "./components/CarouselGames";
+import Parties from "./views/generalviews/Parties";
+import Folders from "./views/generalviews/Folders";
+
 
 function App() {
   return (
     <div className="container">
       <header className="header">
         <NavbarGames />
+      </header>
+      <main className="main">
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="carousel" element={<CarouselGames />} />
           <Route path="eurogames" element={<EuroGames />} />
           <Route path="familiares" element={<Familiares />} />
+          <Route path="parties" element={<Parties />} />
+          <Route path="accesorios" element={<Folders />} />
         </Routes>
-      </header>
-      <main className="main"></main>
+      </main>
       <footer className="footer">© 2025 Tienda Juegos</footer>
     </div>
   );

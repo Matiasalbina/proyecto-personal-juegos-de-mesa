@@ -1,0 +1,97 @@
+/* 🎯 Estilos base (móvil por defecto) */
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    /* Vista móvil */
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.carousel-track {
+    display: flex;
+    animation: slide 15s infinite ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-loop-container {
+    z-index: 0 !important;
+  }
+  
+  
+
+/* 🎞 Animación de desplazamiento automático */
+@keyframes slide {
+
+    0%,
+    20% {
+        transform: translateX(0%);
+    }
+
+    33.33%,
+    53.33% {
+        transform: translateX(-100%);
+    }
+
+    66.66%,
+    86.66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* 📱 Tablet (768px a 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .custom-carousel {
+        height: 400px;
+        width: 100%;
+    }
+
+    .carousel-slide img {
+        max-width: 400px;
+        max-height: 400px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .custom-carousel {
+        z-index: 0 !important; /* 🔧 fuerza que esté atrás */
+        position: relative;
+      }
+
+    
+}
+
+/* 💻 Escritorio (1200px en adelante) */
+@media (min-width: 1200px) {
+    .custom-carousel {
+        height: 500px;
+        max-width: 100%;
+    }
+
+    .carousel-slide img {
+        max-width: 500px;
+        max-height: 500px;
+        object-fit: contain;
+        display: block;
+    }
+}

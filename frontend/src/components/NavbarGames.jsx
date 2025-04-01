@@ -89,17 +89,38 @@ const Navbar = () => {
               {isDropdownOpen === "Juegos de Mesa" && (
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="eurogames">
+                    <Link
+                      to="eurogames"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       <FaDiceD20 /> Eurogames
                     </Link>
                   </li>
                   <li>
-                    <Link to="familiares">
+                    <Link
+                      to="familiares"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       <FaUsers /> Familiares
                     </Link>
                   </li>
                   <li>
-                    <Link to="parties">
+                    <Link
+                      to="parties"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       <FaGlassCheers /> Parties
                     </Link>
                   </li>
@@ -128,7 +149,16 @@ const Navbar = () => {
               {/* Desplegable: Accesorios */}
               {isDropdownOpen === "Accesorios" && (
                 <ul className="dropdown-menu">
-                  <li>Folders</li>
+                  <li><Link
+                      to="accesorios"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
+                      Folders
+                    </Link></li>
                 </ul>
               )}
             </li>

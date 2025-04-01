@@ -2,7 +2,7 @@ import React from 'react'
 
 const Parties = () => {
   return (
-    <div>Parties</div>
+    <div><h1 style={{ color: 'black' }}>Parties</h1></div>
   )
 }
 
