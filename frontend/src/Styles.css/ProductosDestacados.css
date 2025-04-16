@@ -1,0 +1,38 @@
+.productos-destacados {
+    padding: 40px 20px;
+    text-align: center;
+    
+    background-color: #c4e9a6;
+  }
+  
+  .titulo-destacados {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000000;
+    margin-top: 0%;
+  }
+  
+  .contenedor-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  
+  /* Tablet: 2 columnas */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .contenedor-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Escritorio: 3 columnas */
+  @media (min-width: 1200px) {
+    .contenedor-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
