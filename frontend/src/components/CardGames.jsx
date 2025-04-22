@@ -2,11 +2,21 @@ import React from "react";
 import "../Styles.css/CardStyles.css";
 
 const ProductCard = ({ image, title, price, button }) => {
+  // Validación básica: si falta alguna prop esencial, mostramos un mensaje de error.
+  // Esto evita que el componente se rompa si recibe datos incompletos o incorrectos.
+  if (!image || !title || typeof price !== "number") {
+    return (
+      <div className="product-card error">
+        <p>No se han cargado correctamente las props del producto.</p>
+      </div>
+    );
+  }
+
   // Formateador estilo chileno (CLP)
   const formattedPrice = new Intl.NumberFormat("es-CL", {
     style: "currency",
     currency: "CLP",
-    minimumFractionDigits: 0, // Para no mostrar decimales
+    minimumFractionDigits: 0,
   }).format(price);
 
   return (
