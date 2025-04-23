@@ -7,6 +7,8 @@ Este proyecto es una página web para mostrar y vender juegos de mesa. Incluye u
 - HTML
 - CSS
 - JavaScript
+- TypeScript
+- SQL
 - React
 
 ## 📷 Capturas de pantalla
