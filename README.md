@@ -10,6 +10,15 @@ Este proyecto es una página web para mostrar y vender juegos de mesa. Incluye u
 - TypeScript
 - SQL
 - React
+- Node.js
+- Express
+- PostgreSQL
+- pg (node-postgres)
+- dotenv
+- ts-node
+- nodemon
+- Git & GitHub
+
 
 ## 📷 Capturas de pantalla
 ![Vista Pagina Principal](https://github.com/user-attachments/assets/717ebf43-dd36-4faf-8198-e0daba3fda8d)
