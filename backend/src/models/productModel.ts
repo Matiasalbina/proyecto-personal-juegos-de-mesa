@@ -1,26 +1,36 @@
-import { pool } from "../db/config"; // Importa el pool de conexión a PostgreSQL
+import { pool } from "../db/config"; // Importa la conexión a PostgreSQL desde config.ts
 
-// Obtiene todos los productos de la base de datos
-export async function getAllProducts(): Promise<any[]> { // Retorna una promesa que contiene un arreglo de productos
+// ✅ Interfaz que define la estructura exacta de un producto
+export interface Product {
+  id: number;               // Identificador único (PRIMARY KEY)
+  name: string;             // Nombre del producto
+  description: string;      // Descripción del producto
+  price: number;            // Precio del producto
+  image_url: string;        // Ruta de la imagen (no se guarda la imagen, solo el enlace)
+  category: string[];       // Categorías en un array (por ejemplo: ["eurogames", "destacado"])
+}
+
+// ✅ Función que obtiene todos los productos desde la tabla "products"
+export async function getAllProducts(): Promise<Product[]> { // Retorna una promesa que contiene un arreglo de productos
   try {
-    const result = await pool.query("SELECT * FROM products"); // Ejecuta consulta para obtener todos los registros
-    return result.rows; // Devuelve las filas como arreglo de objetos
-  } catch (error: unknown) { // Captura cualquier error (tipado seguro)
+    const result = await pool.query<Product>("SELECT * FROM products"); // Ejecuta la consulta SQL y le indica que espera objetos tipo Product
+    return result.rows; // Devuelve los resultados tipados como Product[]
+  } catch (error: unknown) { // Captura cualquier tipo de error de forma segura
     console.error("❌ Error al obtener todos los productos:", error); // Muestra el error en consola
-    throw error; // Re-lanza el error para manejarlo en el controlador
+    throw error; // Re-lanza el error para que sea manejado en otro lugar (por ejemplo, el controlador)
   }
 }
 
-// Obtiene productos que contengan una categoría específica
-export async function getProductsByCategory(category: string): Promise<any[]> { // Parámetro tipado, retorno igual
+// ✅ Función que obtiene productos filtrados por una categoría específica
+export async function getProductsByCategory(category: string): Promise<Product[]> { // El parámetro 'category' debe ser string, y retorna Product[]
   try {
-    const result = await pool.query(
-      "SELECT * FROM products WHERE $1 = ANY(category)", // Filtra usando array de categorías
-      [category] // Inserta el valor de forma segura
+    const result = await pool.query<Product>( // También se tipa como Product[]
+      "SELECT * FROM products WHERE $1 = ANY(category)", // Usa PostgreSQL para filtrar si la categoría está dentro del array
+      [category] // Pasa el valor como parámetro seguro (evita SQL injection)
     );
-    return result.rows; // Devuelve solo los productos filtrados
+    return result.rows; // Devuelve los productos que coincidan con esa categoría
   } catch (error: unknown) {
-    console.error(`❌ Error al obtener productos por categoría (${category}):`, error); // Muestra error con categoría
+    console.error(`❌ Error al obtener productos por categoría (${category}):`, error); // Muestra el error con contexto
     throw error;
   }
 }
