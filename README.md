@@ -26,6 +26,7 @@ Este proyecto es una página web para mostrar y vender juegos de mesa. Incluye u
 
 
 
+
 ## 🛠️ Funcionalidades
 
 - Visualización de juegos de mesa con imágenes y descripción
