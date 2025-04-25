@@ -2,10 +2,11 @@ import React from "react";
 import CarouselGames from "../../components/CarouselGames";
 import ProductosDestacados from "./ProductosDestacados";
 
-const Home = () => {
+// ✅ Componente funcional tipado
+const Home: React.FC = () => {
   return (
     <div>
-      <CarouselGames /> 
+      <CarouselGames />
       <ProductosDestacados />
     </div>
   );

@@ -1,0 +1,138 @@
+import { useState, useEffect } from "react";
+import "../Styles.css/NavbarStyle.css";
+import { FaInstagram, FaUser, FaShoppingCart, FaDiceD20, FaUsers, FaGlassCheers } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+// Especificamos que puede ser el nombre del dropdown o false
+type DropdownType = "Juegos de Mesa" | "Accesorios" | false;
+
+const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // ← Tipado booleano
+  const [isDropdownOpen, setIsDropdownOpen] = useState<DropdownType>(false); // ← Tipo personalizado para más claridad
+
+  useEffect(() => {
+    // Función que cierra el menú si se hace clic fuera
+    const handleOutsideClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest(".principal-menu")) {
+        setIsMenuOpen(false);
+        setIsDropdownOpen(false);
+      }
+    };
+
+    window.addEventListener("click", handleOutsideClick);
+    return () => window.removeEventListener("click", handleOutsideClick); // ← Importante: limpiamos el listener
+  }, []);
+
+  return (
+    <nav className="navbarGames">
+      <div className="principal-content">
+        <div className="social-media">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+          <span>Síguenos en redes sociales</span>
+        </div>
+        <div className="user-cart-icons">
+          <a href="/login">
+            <FaUser title="Iniciar sesión / Crear cuenta" />
+          </a>
+          <span>Inicio Sesión</span>
+          <a href="/cart">
+            <FaShoppingCart title="Carrito de compras" />
+          </a>
+          <span>Carrito</span>
+        </div>
+      </div>
+
+      <div className="principal-menu">
+        <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <FaDiceD20 size={28} color="black" />
+        </button>
+
+        <div className={`list ${isMenuOpen ? "open" : ""}`}>
+          <ul>
+            {/* Juegos de Mesa */}
+            <li
+              className={`dropdown ${isDropdownOpen === "Juegos de Mesa" ? "open" : ""}`}
+              onMouseEnter={() => setIsDropdownOpen("Juegos de Mesa")}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              <div
+                className="dropdown-toggle"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsDropdownOpen(isDropdownOpen === "Juegos de Mesa" ? false : "Juegos de Mesa");
+                }}
+              >
+                Juegos de Mesa
+              </div>
+
+              {isDropdownOpen === "Juegos de Mesa" && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="eurogames" className="dropdown-link" onClick={() => {
+                      setIsMenuOpen(false); setIsDropdownOpen(false);
+                    }}>
+                      <FaDiceD20 /> Eurogames
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="familiares" className="dropdown-link" onClick={() => {
+                      setIsMenuOpen(false); setIsDropdownOpen(false);
+                    }}>
+                      <FaUsers /> Familiares
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="parties" className="dropdown-link" onClick={() => {
+                      setIsMenuOpen(false); setIsDropdownOpen(false);
+                    }}>
+                      <FaGlassCheers /> Parties
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            {/* Accesorios */}
+            <li
+              className={`dropdown ${isDropdownOpen === "Accesorios" ? "open" : ""}`}
+              onMouseEnter={() => setIsDropdownOpen("Accesorios")}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              <div
+                className="dropdown-toggle"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsDropdownOpen(isDropdownOpen === "Accesorios" ? false : "Accesorios");
+                }}
+              >
+                Accesorios
+              </div>
+
+              {isDropdownOpen === "Accesorios" && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="accesorios" className="dropdown-link" onClick={() => {
+                      setIsMenuOpen(false); setIsDropdownOpen(false);
+                    }}>
+                      Folders
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            <li onClick={() => setIsMenuOpen(false)}>Ofertas</li>
+            <li onClick={() => setIsMenuOpen(false)}>Productos Destacados</li>
+            <li onClick={() => setIsMenuOpen(false)}>Novedades</li>
+            <li onClick={() => setIsMenuOpen(false)}>Nuestro Blog</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

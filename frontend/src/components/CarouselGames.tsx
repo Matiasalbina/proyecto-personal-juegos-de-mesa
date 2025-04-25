@@ -1,10 +1,13 @@
 import React from "react";
 import "../Styles.css/CarouselStyle.css";
+
+// Importamos las imágenes como módulos (TypeScript lo permite si tienes `resolveJsonModule` o soporte para imágenes)
 import bitoku from "../assets/bitoku_prueba.jpg";
 import daitoshi from "../assets/daitoshi.jpg";
 import foreverHome from "../assets/forever-home.jpg";
 
-function CarouselGames() {
+// No recibe props, por lo tanto no necesita interfaz
+const CarouselGames: React.FC = () => {
   return (
     <div className="custom-carousel">
       <div className="carousel-track">
@@ -20,6 +23,6 @@ function CarouselGames() {
       </div>
     </div>
   );
-}
+};
 
 export default CarouselGames;

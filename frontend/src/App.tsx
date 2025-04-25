@@ -7,9 +7,9 @@ import Home from "./views/generalviews/Home";
 import CarouselGames from "./components/CarouselGames";
 import Parties from "./views/generalviews/Parties";
 import Folders from "./views/generalviews/Folders";
+import React from "react"; // ✅ Import necesario para TSX
 
-
-function App() {
+const App: React.FC = () => {
   return (
     <div className="container">
       <header className="header">
@@ -28,6 +28,6 @@ function App() {
       <footer className="footer">© 2025 Tienda Juegos</footer>
     </div>
   );
-}
+};
 
 export default App;

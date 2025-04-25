@@ -5,7 +5,8 @@ import daitoshi from "../../assets/daitoshi.jpg";
 import forever from "../../assets/forever-home.jpg";
 import "../../Styles.css/ProductosDestacados.css";
 
-const ProductosDestacados = () => {
+// ✅ Componente funcional tipado
+const ProductosDestacados: React.FC = () => {
   return (
     <section className="productos-destacados">
       <h2 className="titulo-destacados">Productos Destacados</h2>
