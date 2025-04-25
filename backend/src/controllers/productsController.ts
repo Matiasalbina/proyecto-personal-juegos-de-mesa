@@ -1,30 +1,22 @@
-import { Request, Response } from "express"; // ✅ Importamos los tipos de Express para usar tipado en `req` y `res`
-import { getAllProducts } from "../models/productModel";
+import { Request, Response } from "express"; // Tipos de Express para req/res
+import { getAllProducts, Product } from "../models/productModel"; // Función que obtiene productos desde la DB
 
-// ✅ Controlador que maneja la solicitud GET para obtener todos los productos
-// - `req`: Request → representa la solicitud HTTP entrante
-// - `res`: Response → representa la respuesta HTTP a enviar
-export const getProducts = async (req: Request, res: Response) => {
+// ✅ Controlador para manejar GET /products
+export const getProducts = async (
+  req: Request,         // Tipado de la solicitud HTTP
+  res: Response<Product[] | { error: string }>         // Tipado de la respuesta HTTP
+): Promise<void> => {   // Tipo de retorno explícito: una promesa sin valor (void)
   try {
-    const products = await getAllProducts(); // Llama al modelo para obtener todos los productos desde la base de datos
-    res.json(products); // Devuelve los productos en formato JSON al cliente
-  } catch (error) {
-    res.status(500).json({ error: "Error al obtener productos" }); // Si ocurre un error, responde con estado 500 (Error Interno del Servidor)
+    const products: Product [] = await getAllProducts(); // Consulta los productos desde el modelo
+    res.status(200).json(products);          // Respuesta 200 OK con datos en JSON
+  } catch (error: unknown) {                 // Tipado estricto del error
+    if (error instanceof Error) {
+      console.error("❌ Error en getProducts:", error.message); // Log con mensaje detallado
+      res.status(500).json({ error: error.message });           // Envía mensaje exacto del error
+    } else {
+      res.status(500).json({ error: "Error inesperado al obtener productos" }); // Fallback por si no es instancia de Error
+    }
   }
 };
 
 
-
-
-
-
-/*
-------------------------------------------------
-📄 RESUMEN TÉCNICO - productsController.ts
-------------------------------------------------
-
-- Se usa `Request` y `Response` desde Express para proporcionar tipado a los parámetros del controlador.
-- La función `getProducts` es asincrónica y devuelve todos los productos al cliente.
-- Si la consulta al modelo falla, responde con estado HTTP 500.
-- Forma parte del controlador en la arquitectura MVC, actuando como intermediario entre la ruta y el modelo.
-*/
