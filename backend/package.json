@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.1692.0",
+    "@aws-sdk/client-s3": "^3.802.0",
     "axios": "^1.8.4",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -32,6 +32,7 @@
     "@types/jsonwebtoken": "^9.0.9",
     "@types/morgan": "^1.9.9",
     "@types/multer": "^1.4.12",
+    "@types/multer-s3": "^3.0.3",
     "@types/node": "^22.15.3",
     "@types/pg": "^8.11.13",
     "nodemon": "^3.1.10",
