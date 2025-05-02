@@ -8,6 +8,7 @@ import CarouselGames from "./components/CarouselGames";
 import Parties from "./views/generalviews/Parties";
 import Folders from "./views/generalviews/Folders";
 import React from "react"; // ✅ Import necesario para TSX
+import AdminPanel from "./views/AdminPanel";
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Route path="familiares" element={<Familiares />} />
           <Route path="parties" element={<Parties />} />
           <Route path="accesorios" element={<Folders />} />
+          <Route path="admin" element={<AdminPanel />} /> {/* ← Aquí lo agregas */}
         </Routes>
       </main>
       <footer className="footer">© 2025 Tienda Juegos</footer>

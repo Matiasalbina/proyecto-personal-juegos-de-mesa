@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import "../Styles.css/NavbarStyle.css";
-import { FaInstagram, FaUser, FaShoppingCart, FaDiceD20, FaUsers, FaGlassCheers } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaUser,
+  FaShoppingCart,
+  FaDiceD20,
+  FaUsers,
+  FaGlassCheers,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 // Especificamos que puede ser el nombre del dropdown o false
@@ -28,17 +35,22 @@ const Navbar: React.FC = () => {
     <nav className="navbarGames">
       <div className="principal-content">
         <div className="social-media">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
             <FaInstagram />
           </a>
           <span>Síguenos en redes sociales</span>
         </div>
         <div className="user-cart-icons">
-          <a href="/login">
+          <a href="/login" aria-label="Iniciar sesión o crear cuenta">
             <FaUser title="Iniciar sesión / Crear cuenta" />
           </a>
           <span>Inicio Sesión</span>
-          <a href="/cart">
+          <a href="/cart" aria-label="Ir al carrito de compras">
             <FaShoppingCart title="Carrito de compras" />
           </a>
           <span>Carrito</span>
@@ -46,7 +58,12 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="principal-menu">
-        <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          type="button"
+          className="menu-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Abrir o cerrar el menú"
+        >
           <FaDiceD20 size={28} color="black" />
         </button>
 
@@ -54,7 +71,9 @@ const Navbar: React.FC = () => {
           <ul>
             {/* Juegos de Mesa */}
             <li
-              className={`dropdown ${isDropdownOpen === "Juegos de Mesa" ? "open" : ""}`}
+              className={`dropdown ${
+                isDropdownOpen === "Juegos de Mesa" ? "open" : ""
+              }`}
               onMouseEnter={() => setIsDropdownOpen("Juegos de Mesa")}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
@@ -62,7 +81,11 @@ const Navbar: React.FC = () => {
                 className="dropdown-toggle"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setIsDropdownOpen(isDropdownOpen === "Juegos de Mesa" ? false : "Juegos de Mesa");
+                  setIsDropdownOpen(
+                    isDropdownOpen === "Juegos de Mesa"
+                      ? false
+                      : "Juegos de Mesa"
+                  );
                 }}
               >
                 Juegos de Mesa
@@ -71,23 +94,38 @@ const Navbar: React.FC = () => {
               {isDropdownOpen === "Juegos de Mesa" && (
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="eurogames" className="dropdown-link" onClick={() => {
-                      setIsMenuOpen(false); setIsDropdownOpen(false);
-                    }}>
+                    <Link
+                      to="eurogames"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       <FaDiceD20 /> Eurogames
                     </Link>
                   </li>
                   <li>
-                    <Link to="familiares" className="dropdown-link" onClick={() => {
-                      setIsMenuOpen(false); setIsDropdownOpen(false);
-                    }}>
+                    <Link
+                      to="familiares"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       <FaUsers /> Familiares
                     </Link>
                   </li>
                   <li>
-                    <Link to="parties" className="dropdown-link" onClick={() => {
-                      setIsMenuOpen(false); setIsDropdownOpen(false);
-                    }}>
+                    <Link
+                      to="parties"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       <FaGlassCheers /> Parties
                     </Link>
                   </li>
@@ -97,7 +135,9 @@ const Navbar: React.FC = () => {
 
             {/* Accesorios */}
             <li
-              className={`dropdown ${isDropdownOpen === "Accesorios" ? "open" : ""}`}
+              className={`dropdown ${
+                isDropdownOpen === "Accesorios" ? "open" : ""
+              }`}
               onMouseEnter={() => setIsDropdownOpen("Accesorios")}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
@@ -105,7 +145,9 @@ const Navbar: React.FC = () => {
                 className="dropdown-toggle"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setIsDropdownOpen(isDropdownOpen === "Accesorios" ? false : "Accesorios");
+                  setIsDropdownOpen(
+                    isDropdownOpen === "Accesorios" ? false : "Accesorios"
+                  );
                 }}
               >
                 Accesorios
@@ -114,9 +156,14 @@ const Navbar: React.FC = () => {
               {isDropdownOpen === "Accesorios" && (
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="accesorios" className="dropdown-link" onClick={() => {
-                      setIsMenuOpen(false); setIsDropdownOpen(false);
-                    }}>
+                    <Link
+                      to="accesorios"
+                      className="dropdown-link"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsDropdownOpen(false);
+                      }}
+                    >
                       Folders
                     </Link>
                   </li>
