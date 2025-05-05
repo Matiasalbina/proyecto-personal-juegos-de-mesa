@@ -32,8 +32,12 @@ El objetivo principal es crear una plataforma escalable y moderna para presentar
 
 
 
-## 📷 Capturas de pantalla
-![Vista Pagina Principal](https://github.com/user-attachments/assets/717ebf43-dd36-4faf-8198-e0daba3fda8d)
+## 🖼️ (3 Tipos de vista)
+![alt text](image-4.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+## 🖼️ Sección de Productos Destacados (Renderizado con imágenes desde AWS S3)
 
 ![alt text](image.png)
 
