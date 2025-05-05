@@ -8,6 +8,7 @@ export const getProducts = async (
 ): Promise<void> => {   // Tipo de retorno explícito: una promesa sin valor (void)
   try {
     const products: Product [] = await getAllProducts(); // Consulta los productos desde el modelo
+    console.log("🧪 Productos desde la base de datos:", products);
     res.status(200).json(products);          // Respuesta 200 OK con datos en JSON
   } catch (error: unknown) {                 // Tipado estricto del error
     if (error instanceof Error) {

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
+import { ImageUploadProvider } from "./context/ImageUploadContext";
 
 const rootElement = document.getElementById("root");
 
@@ -12,8 +13,10 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ImageUploadProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ImageUploadProvider>
   </React.StrictMode>
 );

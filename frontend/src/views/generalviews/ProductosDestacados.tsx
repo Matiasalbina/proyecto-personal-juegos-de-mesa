@@ -1,34 +1,37 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import CardGames from "../../components/CardGames";
-import bitoku from "../../assets/bitoku_prueba.jpg";
-import daitoshi from "../../assets/daitoshi.jpg";
-import forever from "../../assets/forever-home.jpg";
 import "../../Styles.css/ProductosDestacados.css";
 
-// ✅ Componente funcional tipado
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image_url: string;
+}
+
 const ProductosDestacados: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("Error cargando productos:", err));
+  }, []);
+
   return (
     <section className="productos-destacados">
       <h2 className="titulo-destacados">Productos Destacados</h2>
       <div className="contenedor-cards">
-        <CardGames
-          image={bitoku}
-          title="Bitoku"
-          price={57990}
-          button={<button className="add-btn">Añadir</button>}
-        />
-        <CardGames
-          image={daitoshi}
-          title="Daitoshi"
-          price={39990}
-          button={<button className="add-btn">Añadir</button>}
-        />
-        <CardGames
-          image={forever}
-          title="Forever Home"
-          price={29990}
-          button={<button className="add-btn">Añadir</button>}
-        />
+        {products.map((product) => (
+          <CardGames
+            key={product.id}
+            image={product.image_url}
+            title={product.name}
+            price={product.price}
+            button={<button className="add-btn">Añadir</button>}
+          />
+        ))}
       </div>
     </section>
   );

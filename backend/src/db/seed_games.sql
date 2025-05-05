@@ -1,37 +1,32 @@
+DELETE FROM products;
+
 INSERT INTO products (name, price, description, image_url, category)
 VALUES
   (
     'La Oscuridad Asfixiante',
     74990,
     'Juego de terror con mecánicas innovadoras.',
-    '/uploads/la-oscuridad-asfixiante.jpg',
-    'novedad'
+    'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/la-oscuridad-asfixiante.jpg',
+    ARRAY['eurogames', 'novedad']
   ),
   (
     'Reinos Rodados Relanzados',
     59990,
     'Juego de estrategia con dados y escritura.',
-    '/uploads/reinos-rodados-relanzados.jpg',
-    'más vendido'
+    'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/reinos-rodados-relanzados.jpg',
+    ARRAY['eurogames', 'destacado']
   ),
   (
     'Proyecto Arrecife',
     62990,
     'Juego de exploración marina.',
-    '/uploads/proyecto-arrecife.jpg',
-    'novedad'
+    'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/proyecto-arrecife.jpg',
+    ARRAY['novedad']
   ),
   (
     'Bitoku',
     62990,
     'Juego de construcción de motor.',
-    '/uploads/bitoku_prueba.jpg',
-    'novedad'
+    'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/bitoku_prueba.jpg',
+    ARRAY['novedad']
   );
-
-UPDATE products
-SET category = ARRAY['eurogames', 'destacado']
-WHERE name = 'Reinos Rodados Relanzados';
-
-
-SELECT * FROM products;
