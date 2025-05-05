@@ -1,6 +1,16 @@
 # 🎲 Proyecto Personal - Juegos de Mesa
 
-Este proyecto es una página web para mostrar y vender juegos de mesa. Incluye un Navbar, carrusel de imágenes, seccion de productos destacados.
+Este proyecto es una aplicación web full stack desarrollada con TypeScript, que permite mostrar y gestionar productos de una tienda de juegos de mesa.  
+Incluye funcionalidades como:
+
+- Visualización de productos destacados con imágenes cargadas desde AWS S3.
+- Subida de imágenes al bucket de Amazon mediante un formulario en el frontend.
+- Almacenamiento de información del producto en una base de datos PostgreSQL.
+- Backend desarrollado con Node.js y Express, utilizando consultas SQL para gestionar los datos.
+- Comunicación entre frontend y backend a través de API REST.
+- Uso de Context API para manejar el estado global relacionado con las imágenes.
+
+El objetivo principal es crear una plataforma escalable y moderna para presentar productos de forma dinámica y profesional.
 
 ## 🚀 Tecnologías utilizadas
 
@@ -18,11 +28,14 @@ Este proyecto es una página web para mostrar y vender juegos de mesa. Incluye u
 - ts-node
 - nodemon
 - Git & GitHub
+- AWS (Amazon S3)
+
 
 
 ## 📷 Capturas de pantalla
 ![Vista Pagina Principal](https://github.com/user-attachments/assets/717ebf43-dd36-4faf-8198-e0daba3fda8d)
 
+![alt text](image.png)
 
 
 
@@ -39,4 +52,4 @@ Este proyecto es una página web para mostrar y vender juegos de mesa. Incluye u
 ```bash
 git clone https://github.com/Matiasalbina/proyecto-personal-juegos-de-mesa.git
 npm run dev para frontend
-npm start para backend
+npm run dev para backend
