@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import { ImageUploadProvider } from "./context/ImageUploadContext";
+import { ProductProvider } from "./context/productContext"; // 👈 importa el nuevo provider
 
 const rootElement = document.getElementById("root");
 
@@ -14,9 +15,11 @@ if (!rootElement) {
 createRoot(rootElement).render(
   <React.StrictMode>
     <ImageUploadProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ProductProvider> {/* 👈 Añadido aquí */}
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ProductProvider>
     </ImageUploadProvider>
   </React.StrictMode>
 );

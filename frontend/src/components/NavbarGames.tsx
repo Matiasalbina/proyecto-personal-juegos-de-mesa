@@ -45,6 +45,9 @@ const Navbar: React.FC = () => {
           </a>
           <span>Síguenos en redes sociales</span>
         </div>
+        <div className="logo">
+          <img src="/images/mundo-ludico.png" alt="" />
+        </div>
         <div className="user-cart-icons">
           <a href="/login" aria-label="Iniciar sesión o crear cuenta">
             <FaUser title="Iniciar sesión / Crear cuenta" />

@@ -247,6 +247,19 @@
         width: 100%;
     }
 
+    .logo {
+        display: flex;
+        height: 72px;
+        width: 200px;
+        align-items: center;
+    }
+    .logo img {
+        width: 70%;
+        height: 90%;
+        border-radius: 5px;
+
+    }
+
     .principal-content {
         background-color: rgb(255, 255, 255);
         width: 100%;
