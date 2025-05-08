@@ -33,9 +33,14 @@ El objetivo principal es crear una plataforma escalable y moderna para presentar
 
 
 ## 🖼️ (3 Tipos de vista)
-![alt text](image-4.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+-Primera Vista Desktop
+![alt text](image-5.png)
+
+-Segunda Vista Tablet
+![alt text](image-6.png)
+
+-Tercera vista Mobile
+![alt text](image-7.png)
 
 ## 🖼️ Sección de Productos Destacados (Renderizado con imágenes desde AWS S3)
 
