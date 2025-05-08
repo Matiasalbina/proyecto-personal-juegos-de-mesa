@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { PutObjectCommand, ObjectCannedACL } from "@aws-sdk/client-s3";
+import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { s3 } from "../aws/s3Client";
 
 export const uploadImage = async (req: Request, res: Response): Promise<void> => {
@@ -10,7 +10,8 @@ export const uploadImage = async (req: Request, res: Response): Promise<void> =>
     }
 
     const file = req.file;
-    const key = `${Date.now()}-${file.originalname}`;
+    const category = req.body.category || "otros"; // puedes enviar esto desde el form
+    const key = `${category}/${Date.now()}-${file.originalname}`;
 
     const params = {
       Bucket: process.env.AWS_BUCKET_NAME!,

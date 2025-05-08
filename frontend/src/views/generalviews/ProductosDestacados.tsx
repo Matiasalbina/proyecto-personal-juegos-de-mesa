@@ -1,29 +1,20 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { useProducts } from "../../context/productContext";
 import CardGames from "../../components/CardGames";
 import "../../Styles.css/ProductosDestacados.css";
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image_url: string;
-}
-
 const ProductosDestacados: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const products = useProducts();
 
-  useEffect(() => {
-    fetch("http://localhost:3000/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.error("Error cargando productos:", err));
-  }, []);
+  const destacados = products.filter((product) =>
+    product.category.includes("destacado")
+  );
 
   return (
     <section className="productos-destacados">
       <h2 className="titulo-destacados">Productos Destacados</h2>
       <div className="contenedor-cards">
-        {products.map((product) => (
+        {destacados.map((product) => (
           <CardGames
             key={product.id}
             image={product.image_url}

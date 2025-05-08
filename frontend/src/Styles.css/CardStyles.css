@@ -8,6 +8,7 @@
     background-color: white;
     transition: transform 0.2s ease;
     justify-content: space-between;
+    height: 400px;
 
   }
   
@@ -17,23 +18,22 @@
   
   .product-image {
     width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
+    max-height: 250px;
+    object-fit: cover;
     border-radius: 8px;
   }
   
   .product-info h3 {
-    margin: 10px 0 5px;
+    margin:  0 5px;
     font-size: 1.2rem;
     color: #000000;
     border-top: #ccc 1px solid;
     padding-top: 0.5rem;
-    height: 60px;
+    height: 3rem;
   }
 
   .product-info {
-    min-height: 156px; /* o el valor necesario según tus contenidos */
+    min-height: 3rem; /* o el valor necesario según tus contenidos */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,6 +46,7 @@
     margin-top: 10px;
     font-weight: bold;
     color: #b71c1c;
+    margin-bottom: 10px;
   }
   
   .add-btn {

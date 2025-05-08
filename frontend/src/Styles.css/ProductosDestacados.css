@@ -1,15 +1,16 @@
 .productos-destacados {
-    padding: 40px 20px;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 3rem;
     text-align: center;
-    
-    background-color: #c4e9a6;
+    background-color: #eaeaea;
   }
   
   .titulo-destacados {
     font-size: 2rem;
-    margin-bottom: 30px;
     color: #000000;
-    margin-top: 0%;
+    margin: 0%;
+    padding: 1.5rem;
   }
   
   .contenedor-cards {

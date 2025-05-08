@@ -1,17 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { useProducts } from "../../context/productContext";
 import CardGames from "../../components/CardGames";
 import "../../Styles.css/Eurogames.css";
 
 const EuroGames: React.FC = () => {
   const products = useProducts();
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [maxPrice, setMaxPrice] = useState<number>(Infinity);
 
-  // Solo productos que contienen la categoría "eurogames"
-  const eurogames = products.filter((product) => product.category.includes("eurogames"));
+  const eurogames = products
+    .filter((product) => product.category.includes("eurogames"))
+    .filter((product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter((product) => product.price <= maxPrice);
 
   return (
     <section className="eurogames-section">
-      <h2 className="euro-titulo-destacados">Eurogames</h2>
+      {/* Título y filtros alineados en flex */}
+      <div className="eurogames-header">
+        <h2 className="euro-titulo-destacados">Eurogames</h2>
+        <p className="contador-juegos">Hay {eurogames.length} juegos disponibles</p>
+        <div className="filtros-eurogames">
+          <input
+            type="text"
+            placeholder="Buscar..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Precio máx."
+            onChange={(e) =>
+              setMaxPrice(e.target.value ? Number(e.target.value) : Infinity)
+            }
+          />
+        </div>
+      </div>
 
       <div className="contenedor-cards">
         {eurogames.map((product) => (

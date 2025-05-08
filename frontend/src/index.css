@@ -125,7 +125,7 @@ body {
     grid-area: main;
     color: black;
     overflow: auto;
-    
+    background-color: #eaeaea;
     
     
   }
