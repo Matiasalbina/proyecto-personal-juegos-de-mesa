@@ -66,17 +66,16 @@ body {
       "header footer";
     grid-template-columns: 160px 1fr;
     grid-template-rows: 1fr 150px;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .header {
     grid-area: header;
     padding: 0;
-    height: 100vh;
+    background-color: #6A0DAD;
     /* Hace que ocupe toda la altura de la pantalla */
     width: 160px;
-    /* Fija el ancho */
-    /* al eliminar el position Fixed se arreglo el menu dropdown y no es sobrepasado por el carousel */
+   
   }
 
   .main {

@@ -10,6 +10,7 @@ export interface Product {
   price: number;
   image_url: string;
   category: string[];
+  stock: number;
 }
 
 // Creamos el contexto

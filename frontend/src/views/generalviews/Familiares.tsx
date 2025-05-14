@@ -41,9 +41,11 @@ const Familiares: React.FC = () => {
         {familiares.map((product) => (
         <CardGames
         key={product.id}
+        id={product.id}
         image={product.image_url}
         title={product.name}
         price={product.price}
+        category={product.category}
         button={<button className="add-btn">Añadir</button>}
         />
         ))}

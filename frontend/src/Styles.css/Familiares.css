@@ -1,36 +1,134 @@
-.familiares-section {
-    background-color: #eaeaea;
-    margin-top: 0%;
-    padding-bottom: 3rem;
+@media (max-width: 768px) {
+    .familiares-section {
+        background-color: #eaeaea;
+        margin-top: 0%;
+        padding-bottom: 3rem;
+    }
+
+    .familiares-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .familiares-titulo {
+        text-align: center;
+        padding: 1.5rem;
+        color: #000000;
+        margin: 0;
+        font-size: 2rem;
+        padding-bottom: 0;
+    }
+
+    .contador-familiares-juegos {
+        font-weight: bold;
+        color: #000000;
+        margin: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .filtros-familiares {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .filtros-familiares input {
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
 }
 
-.familiares-titulo {
-    text-align: center;
-    padding: 1.5rem;
-    color: #000000;
-    margin: 0;
-    font-size: 2rem;
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .familiares-section {
+        background-color: #eaeaea;
+        margin-top: 0%;
+        padding-bottom: 3rem;
+    }
+
+    .familiares-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .familiares-titulo {
+        text-align: center;
+        padding: 1.5rem;
+        color: #000000;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .contador-familiares-juegos {
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .filtros-familiares {
+        gap: 1rem;
+        display: flex;
+    }
+
+    .filtros-familiares input {
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+
+    }
 }
 
-.familiares-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 
-.filtros-familiares {
-    gap: 1rem;
-    display: flex;
-}
 
-.filtros-familiares input {
-    height: 2rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
 
-.contador-familiares-juegos {
-    font-weight: bold;
-    color: #000000;
-  }
+@media (min-width: 1200px) {
+    .familiares-section {
+        background-color: #eaeaea;
+        margin-top: 0%;
+        padding-bottom: 3rem;
+    }
+
+    .familiares-titulo {
+        text-align: center;
+        padding: 1.5rem;
+        color: #000000;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .familiares-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .filtros-familiares {
+        gap: 1rem;
+        display: flex;
+    }
+
+    .filtros-familiares input {
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .contador-familiares-juegos {
+        font-weight: bold;
+        color: #000000;
+    }
+
+}

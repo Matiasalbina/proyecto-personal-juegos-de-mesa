@@ -9,6 +9,7 @@ import Parties from "./views/generalviews/Parties";
 import Folders from "./views/generalviews/Folders";
 import React from "react"; // ✅ Import necesario para TSX
 import AdminPanel from "./views/AdminPanel";
+import GameDetail from "./views/generalviews/GameDetail";
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="carousel" element={<CarouselGames />} />
           <Route path="eurogames" element={<EuroGames />} />
+          <Route path="/juego/:id" element={<GameDetail />} />
           <Route path="familiares" element={<Familiares />} />
           <Route path="parties" element={<Parties />} />
           <Route path="accesorios" element={<Folders />} />

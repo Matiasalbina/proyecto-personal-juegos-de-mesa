@@ -1,67 +1,94 @@
 .product-card {
-    width: 80%;
-    max-width: 250px; /* Limita el ancho */
-    border: 1px solid #ccc;
-    padding: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    background-color: white;
-    transition: transform 0.2s ease;
-    justify-content: space-between;
-    height: 400px;
+  position: relative;
+  /* Necesario para posicionar .badge dentro */
+  width: 80%;
+  max-width: 250px;
+  /* Limita el ancho */
+  border: 1px solid #ccc;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: white;
+  transition: transform 0.2s ease;
+  justify-content: space-between;
+  height: 400px;
 
-  }
-  
-  .product-card:hover {
-    transform: scale(1.03);
-  }
-  
-  .product-image {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .product-info h3 {
-    margin:  0 5px;
-    font-size: 1.2rem;
-    color: #000000;
-    border-top: #ccc 1px solid;
-    padding-top: 0.5rem;
-    height: 3rem;
-  }
+}
 
-  .product-info {
-    min-height: 3rem; /* o el valor necesario según tus contenidos */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-  }
-  
-  
-  .price {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #b71c1c;
-    margin-bottom: 10px;
-  }
-  
-  .add-btn {
-    margin-top: 10px;
-    padding: 8px 32px;
-    background-color: #6A0DAD;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-  }
-  
-  .add-btn:hover {
-    background-color: #39D353;
-  }
-  
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info h3 {
+  margin: 0 5px;
+  font-size: 1.2rem;
+  color: #000000;
+  border-top: #ccc 1px solid;
+  padding-top: 0.5rem;
+  height: 3rem;
+  color: #4d4c4c;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-info {
+  min-height: 3rem;
+  /* o el valor necesario según tus contenidos */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  margin-top: 10px;
+  padding: 8px 32px;
+  background-color: #5e4b8b;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #3CB371;
+}
+
+/* Estilo base para cualquier etiqueta */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores para cada tipo */
+.badge-new {
+  background-color: #23b6cf;
+}
+
+.badge-featured {
+  background-color: #f39c12;
+}

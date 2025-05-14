@@ -20,6 +20,7 @@ const ProductosDestacados: React.FC = () => {
             image={product.image_url}
             title={product.name}
             price={product.price}
+            category={product.category} // ← agregamos esta prop
             button={<button className="add-btn">Añadir</button>}
           />
         ))}
