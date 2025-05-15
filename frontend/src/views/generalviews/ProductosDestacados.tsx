@@ -17,10 +17,12 @@ const ProductosDestacados: React.FC = () => {
         {destacados.map((product) => (
           <CardGames
             key={product.id}
+            id={product.id}
             image={product.image_url}
             title={product.name}
             price={product.price}
             category={product.category} // ← agregamos esta prop
+            contextCategory="destacado"
             button={<button className="add-btn">Añadir</button>}
           />
         ))}

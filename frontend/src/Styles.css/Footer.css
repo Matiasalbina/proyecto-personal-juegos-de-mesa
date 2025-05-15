@@ -1,0 +1,416 @@
+@media (max-width: 768px) {
+    .suscribe {
+        display: flex;
+        background-color: #5e4b8b;
+        height: auto;
+    }
+
+    .last-new {
+        display: none;
+    }
+
+    .newsletter {
+        width: 50%;
+    }
+
+    .newsletter p {
+        display: none;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 5px;
+
+    }
+
+    .newsletter-form input {
+        height: 1.5rem;
+    }
+
+    .newsletter button {
+        height: 2rem;
+    }
+
+    .social-icons {
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    .social-icons a {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .accordion-section {
+        padding: 10px 10px 10px 10px;
+        background-color: #5e4b8b;
+    }
+
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .accordion-header h3 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .accordion-content ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .accordion-content li {
+        margin: 5px 0;
+    }
+
+    .productos ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .productos ul li {
+        list-style: none;
+    }
+
+    .productos a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .nuestra-empresa ul {
+        padding: 0;
+    }
+
+    .nuestra-empresa ul li {
+        list-style: none;
+    }
+
+    .nuestra-empresa a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .tu-cuenta ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .tu-cuenta ul li {
+        list-style: none;
+    }
+
+    .tu-cuenta a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .tienda ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .tienda ul li {
+        list-style: none;
+    }
+
+    .tienda a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .section-footer {
+        height: auto;
+        width: auto;
+        border-left: 1px solid white;
+    }
+    .suscribe {
+        display: flex;
+        background-color: #5e4b8b;
+        height: auto;
+    }
+
+    .last-new {
+        display: none;
+    }
+
+    .newsletter {
+        width: 50%;
+    }
+
+    .newsletter p {
+        display: none;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 5px;
+
+    }
+
+    .newsletter-form input {
+        height: 1.5rem;
+    }
+
+    .newsletter button {
+        height: 2rem;
+    }
+
+    .social-icons {
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    .social-icons a {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .accordion-section {
+        padding: 10px 10px 10px 10px;
+        background-color: #5e4b8b;
+    }
+
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .accordion-header h3 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .accordion-content ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .accordion-content li {
+        margin: 5px 0;
+    }
+
+    .productos ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .productos ul li {
+        list-style: none;
+    }
+
+    .productos a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .nuestra-empresa ul {
+        padding: 0;
+    }
+
+    .nuestra-empresa ul li {
+        list-style: none;
+    }
+
+    .nuestra-empresa a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .tu-cuenta ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .tu-cuenta ul li {
+        list-style: none;
+    }
+
+    .tu-cuenta a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .tienda ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .tienda ul li {
+        list-style: none;
+    }
+
+    .tienda a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .section-footer {
+        height: auto;
+        width: auto;
+        background-color: #5e4b8b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .suscribe {
+        height: auto;
+        padding: 2rem;
+        width: 90%;
+        color: white;
+        background-color: #5e4b8b;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .last-new {
+        width: 30%;
+    }
+
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: 5px;
+    }
+
+    .newsletter-form input {
+        height: 2rem;
+    }
+
+    .newsletter-form button {
+        height: 38px;
+    }
+
+    .social-icons {
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        font-size: 3rem;
+        color: white;
+    }
+
+
+    /* ========== BUSSINES INFORMATION ========== */
+
+
+    .bussines-information {
+        height: auto;
+        width: 100%;
+        color: white;
+        background-color: #5e4b8b;
+        border-top: 1px solid white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 2rem;
+    }
+
+    .productos ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .productos ul li {
+        list-style: none;
+    }
+
+    .productos a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nuestra-empresa ul {
+        padding: 0;
+    }
+
+    .nuestra-empresa ul li {
+        list-style: none;
+    }
+
+    .nuestra-empresa a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .tu-cuenta ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .tu-cuenta ul li {
+        list-style: none;
+    }
+
+    .tu-cuenta a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .tienda ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .tienda ul li {
+        list-style: none;
+    }
+
+    .tienda a {
+        text-decoration: none;
+        color: white;
+    }
+
+}

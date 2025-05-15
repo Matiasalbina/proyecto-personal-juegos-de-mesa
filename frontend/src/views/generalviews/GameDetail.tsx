@@ -22,7 +22,22 @@ const GameDetail = () => {
       <nav className="breadcrumb">
         <Link to="/">Inicio</Link> /{" "}
         <Link to="/juegos-de-mesa">Juegos de Mesa</Link> /{" "}
-        <Link to="/eurogames">Eurogames</Link> / <span>{game.name}</span>
+        {game.category.includes("eurogames") && (
+          <>
+            <Link to="/eurogames">Eurogames</Link> /{" "}
+          </>
+        )}
+        {game.category.includes("familiares") && (
+          <>
+            <Link to="/familiares">Familiares</Link> /{" "}
+          </>
+        )}
+        {game.category.includes("parties") && (
+          <>
+            <Link to="/parties">Partiegames</Link> /{" "}
+          </>
+        )}
+        <span>{game.name}</span>
       </nav>
 
       <div className="game-detail">

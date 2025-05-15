@@ -30,7 +30,7 @@ VALUES
     62990,
     'A pesar de cubrir menos del 1% del fondo del océano, se estima que los arrecifes de coral albergan aproximadamente el 25% de todas las especies marinas. Por desgracia, estas vibrantes ciudades submarinas están muriendo. El cambio climático y su efecto en el aumento de la temperatura del mar están devastando las coloridas algas que prestan a los arrecifes de coral sus tonos brillantes, lo que provoca el blanqueamiento de los corales. Además, otras amenazas, como la contaminación (en sus diversas formas insidiosas) y la sobrepesca, alteran el delicado equilibrio de los ecosistemas de arrecifes.\n\nPor ello, científicos de diversos campos, junto con investigadores que estudian la complejidad ecológica y la importancia de los arrecifes, están colaborando para abordar los innumerables desafíos a los que se enfrenta estos ecosistemas. Tu tarea consiste en asumir el mando de un barco científico y emprender un viaje de conservación de los arrecifes. Contrata a la mejor tripulación, limpia el océano y devuelve a los arrecifes su antiguo esplendor.',
     'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/proyecto-arrecife.jpg',
-    ARRAY['eurogames', 'novedad'],
+    ARRAY['eurogames', 'novedad', 'destacado'],
     5
   ),
 
@@ -39,7 +39,7 @@ VALUES
     62990,
     'En una época ancestral que el hombre ha olvidado, un gran espíritu habitaba en el bosque. Su mera presencia lo envolvía todo de vida, abundancia y paz. Cada cierto tiempo el gran espíritu marchaba para siempre, y entonces surgía un espíritu bitoku digno de sucederle, para preservar la armonía del bosque.\n\nSe trata de un bosque primordial y milenario, que se extiende desde las Llanuras del Temblor hasta la falda de las montañas Akaishi. En estas montañas nace el río sagrado Kurirakugan, el cual, con su curso caudaloso, cruza el bosque hasta desembocar en los acantilados de Zarpa de Mar. El bosque, que no tiene más nombre que este pues los demás bosques se llaman así por él, es uno de los cinco corazones del mundo. Se dice que en lo más profundo de su espesura, las almas perdidas encuentran solaz y trascienden, o se pierden y dejan de existir tan pronto como se olvida el último recuerdo de su existencia. Jamás existió un sitio igual; seres mágicos y espirituales habitaban este bosque, que hoy es recordado como una leyenda, como un cuento para niños.\n\nHa llegado el momento de que el gran espíritu marche del bosque y de que uno de los bitoku sea elegido como su sucesor. Eres uno de esos espíritus, pero… ¿puedes demostrar que solo tú eres digno de este increíble honor?\n\nBitoku se juega en cuatro rondas que representan los cuatro últimos años que le quedan al gran espíritu. Cada una de estas rondas, a su vez, se divide en cuatro fases o estaciones (primavera, verano, otoño e invierno). Al finalizar el invierno de la cuarta ronda, se acaba la partida y se resuelve la ascensión. Durante la partida, en su turno los jugadores realizan acciones con el objetivo de obtener puntos de virtud (PV). Cuando un jugador gana PV, avanza por el camino del espíritu (el marcador de PV que discurre alrededor del tablero). Durante la ascensión, los jugadores pueden ganar PV adicionales si completan determinados objetivos. El jugador que avance más por el camino del espíritu será el ganador y se convertirá en el nuevo gran espíritu.',
     'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/bitoku_prueba.jpg',
-    ARRAY['eurogames', 'novedad'],
+    ARRAY['eurogames', 'novedad', 'destacado'],
     5
   ),
 (
@@ -72,7 +72,7 @@ VALUES
     'Ambientado en el universo de Blind Business, Fritanga es un juego para amantes de la cocina donde la zona de juego es… ¡una freidora! Los jugadores toman el control de varios alimentos e intentan sobrevivir a toda costa, saltando de un lado a otro de la cesta de la freidora. Cuando un jugador no puede moverse, cae en el aceite hirviendo, se fríe y (desafortunadamente) se elimina del juego. Debes utilizar todas las cartas que recojas para sobrevivir y no quedar deliciosamente maltratado.\n\nFritanga tiene tres modos de juego: todos contra todos, apto para 2 a 6 jugadores; el modo contra el chef, una versión semi-cooperativa para grupos de 3 a 7 jugadores, en el que uno será el chef e intentará freír al resto de jugadores; y el modo por equipos, en el que dos grupos iguales compiten para ganar. Cada modo de juego tiene algunas cartas diferentes para personalizar la experiencia.\n\nTras preparar el tablero central con nueve cartas, que representan espacios en la parrilla de la freidora, los jugadores comienzan sus turnos, que se dividen en dos fases: jugar cartas y moverse. La primera fase te permite jugar tantas cartas como quieras, con el objetivo de mejorar la posición en la freidora o molestar y atacar a tus rivales. La segunda fase te permite alejarte 1-2 cartas. En ese momento, se revela la carta que alcanzaste y luego se activa un efecto o puedes reclamar esa carta para usarla más tarde.
 ',
     'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/familiares/1746721035853-fritanga.jpg',
-    ARRAY['familiares'],
+    ARRAY['familiares', 'novedad'],
     5
   ),
 (
@@ -80,7 +80,7 @@ VALUES
     24990,
     'Los simpáticos vendedores de Jagalchi, el famoso mercado de pescado coreano, tienen tanto trabajo que a veces necesitan descansar un poquito. Y mientras ellos se echan la siesta, sus fieles gatos se ponen zarpas a la obra para dirigir la pescadería. Pero por mucho que estos gatos quieran a sus dueños, un pez es un pez.\n\n¿Qué podría salir mal?',
     'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/familiares/1746721051599-fish-and-katz.jpg',
-    ARRAY['familiares'],
+    ARRAY['familiares', 'novedad'],
     5
   ),
   (
@@ -88,7 +88,7 @@ VALUES
   24990,
   '¿Cuántas judías hay en una lata de judías? ¿Cuánto duró el beso más largo?\n\nDe esto va Paren la nave, un juego de mesa familiar para niños y adultos en el que todas las respuestas son números. Incluye preguntas sobre todo tipo de temas, desde perritos calientes hasta Harry Potter.\n\nLo mejor: ¡no necesitas saber la respuesta! A diferencia de otros juegos familiares de preguntas y respuestas, no necesitas acertar la pregunta para ganar puntos. Solo tienes que acercarte a la respuesta correcta… ¡sin pasarte!',
   'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/parties/1747241273401-paren-la-nave.jpg',
-  ARRAY['parties'],
+  ARRAY['parties', 'novedad'],
   5
 ),
 (
@@ -104,7 +104,7 @@ VALUES
   19990,
   'En TIERLIST, el desafío es crear una lista de preferencias sobre tus amigos y descubrir cuánto sabéis realmente los unos de los otros. ¿Qué artículo erróneo comprarías en una tienda online? ¿Qué te asustaría más al llegar a casa? ¿Cuál sería el mejor superpoder para ti?\n\nDiseñado desde 4 a 10 jugadores, TIERLIST es el juego de fiesta ideal para disfrutar de momentos divertidos y a la vez profundizar en el conocimiento mutuo. ¡Prepárate para risas, revelaciones y una competencia amistosa mientras cada uno intenta demostrar cuánto conoce a sus amigos!',
   'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/parties/1747241296611-tierlist.jpg',
-  ARRAY['parties'],
+  ARRAY['parties', 'novedad'],
   2
 );
 

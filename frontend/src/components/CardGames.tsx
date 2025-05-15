@@ -9,6 +9,7 @@ interface ProductCardProps {
   title: string;
   price: number;
   category?: string[]; // ← nueva prop opcional
+  contextCategory?: string; // 👈 NUEVA PROP
   button?: React.ReactNode; // opcional, puede ser un botón o un link JSX
 }
 
@@ -19,6 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   title,
   price,
   category,
+  contextCategory, // 👈 NUEVA PROP
   button
 }) => {
   const navigate = useNavigate();
@@ -37,12 +39,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className="product-card">
       {/* 🔖 Etiquetas */}
-      {category?.includes("destacado") && (
+      {contextCategory === "destacado" && category?.includes("destacado") && (
         <span className="badge badge-featured">Destacado</span>
       )}
-      {category?.includes("novedad") && (
+      {contextCategory === "novedad" && category?.includes("novedad") && (
         <span className="badge badge-new">Novedad</span>
       )}
+      {/* Si no se pasa contextCategory, se pueden mostrar ambas como antes */}
+      {!contextCategory && category?.includes("destacado") && (
+        <span className="badge badge-featured">Destacado</span>
+      )}
+      {!contextCategory && category?.includes("novedad") && (
+        <span className="badge badge-new">Novedad</span>
+      )}
+
       <img
         src={image}
         alt={title}

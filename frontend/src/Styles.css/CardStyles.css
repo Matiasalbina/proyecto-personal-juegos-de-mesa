@@ -1,17 +1,17 @@
 .product-card {
   position: relative;
   /* Necesario para posicionar .badge dentro */
-  width: 80%;
+  width: 100%;
   max-width: 250px;
   /* Limita el ancho */
   border: 1px solid #ccc;
-  padding: 16px;
+  padding: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   background-color: white;
   transition: transform 0.2s ease;
-  justify-content: space-between;
-  height: 400px;
+  justify-content: center;
+  height: auto;
 
 }
 
@@ -27,7 +27,7 @@
 }
 
 .product-info h3 {
-  margin: 0 5px;
+  margin-top: 0;
   font-size: 1.2rem;
   color: #000000;
   border-top: #ccc 1px solid;
@@ -49,14 +49,14 @@
 
 .price {
   display: block;
-  margin-top: 10px;
+  
   font-weight: bold;
   color: #b71c1c;
-  margin-bottom: 10px;
+  
 }
 
 .add-btn {
-  margin-top: 10px;
+  
   padding: 8px 32px;
   background-color: #5e4b8b;
   color: rgb(255, 255, 255);
@@ -72,7 +72,9 @@
 }
 
 /* Estilo base para cualquier etiqueta */
+/* Esto se aplica a todas las badges */
 .badge {
+  display: inline-block;
   position: absolute;
   top: 10px;
   left: -10px;
@@ -83,6 +85,12 @@
   z-index: 10;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* Esta empuja la segunda etiqueta hacia abajo */
+.badge + .badge {
+  top: 40px; /* Ajusta este valor según el alto de la etiqueta */
+}
+
 
 /* Colores para cada tipo */
 .badge-new {

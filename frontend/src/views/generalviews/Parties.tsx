@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useProducts } from "../../context/productContext";
 import CardGames from "../../components/CardGames";
-import "../../Styles.css/Eurogames.css";
+import "../../Styles.css/Partiegames.css";
 
 const PartieGames: React.FC = () => {
   const products = useProducts();
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [maxPrice, setMaxPrice] = useState<number>(Infinity);
 
-  const eurogames = products
+  const partiegames = products
     .filter((product) => product.category.includes("parties"))
     .filter((product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -19,8 +19,8 @@ const PartieGames: React.FC = () => {
     <section className="partiegames-section">
       {/* Título y filtros alineados en flex */}
       <div className="partiegames-header">
-        <h2 className="partie-titulo-destacados">Eurogames</h2>
-        <p className="contador-juegos">Hay {eurogames.length} juegos disponibles</p>
+        <h2 className="partie-titulo-destacados">Partiegames</h2>
+        <p className="contador-juegos">Hay {partiegames.length} juegos disponibles</p>
         <div className="filtros-partiegames">
           <input
             type="text"
@@ -39,7 +39,7 @@ const PartieGames: React.FC = () => {
       </div>
 
       <div className="contenedor-cards">
-        {eurogames.map((product) => (
+        {partiegames.map((product) => (
           <CardGames
             key={product.id}
             id={product.id}

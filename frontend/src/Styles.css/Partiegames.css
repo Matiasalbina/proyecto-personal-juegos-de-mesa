@@ -1,0 +1,129 @@
+@media (max-width: 768px) {
+    .partiegames-section {
+        background-color: #eaeaea;
+        margin-top: 0%;
+        padding-bottom: 3rem;
+    }
+
+    .partiegames-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .partie-titulo-destacados {
+        text-align: center;
+        padding: 1.5rem;
+        color: #000000;
+        margin: 0;
+        font-size: 2rem;
+        padding-bottom: 0;
+    }
+
+    .contador-juegos {
+        font-weight: bold;
+        color: #000000;
+        margin: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .filtros-partiegames {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .filtros-partiegames input {
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .partiegames-section {
+        background-color: #eaeaea;
+        margin-top: 0%;
+        padding-bottom: 3rem;
+    }
+
+    .partiegames-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .partie-titulo-destacados {
+        text-align: center;
+        padding: 1.5rem;
+        color: #000000;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .filtros-partiegames {
+        gap: 1rem;
+        display: flex;
+    }
+
+    .filtros-partiegames input {
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .contador-juegos {
+        font-weight: bold;
+        color: #000000;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .partiegames-section {
+        background-color: #eaeaea;
+        margin-top: 0%;
+        padding-bottom: 3rem;
+    }
+
+    .partiegames-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .partie-titulo-destacados {
+        text-align: center;
+        padding: 1.5rem;
+        color: #000000;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .filtros-partiegames {
+        gap: 1rem;
+        display: flex;
+    }
+
+    .filtros-partiegames input {
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .contador-juegos {
+        font-weight: bold;
+        color: #000000;
+    }
+
+    
+}
