@@ -44,7 +44,7 @@ El objetivo principal es crear una plataforma escalable y moderna para presentar
 
 ## 🖼️ Sección de Productos Destacados (Renderizado con imágenes desde AWS S3)
 
-![alt text](image.png)
+![alt text](image-8.png)
 
 
 
