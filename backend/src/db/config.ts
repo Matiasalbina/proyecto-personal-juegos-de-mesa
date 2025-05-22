@@ -5,29 +5,30 @@ import path from "path";
 
 dotenv.config();
 
-// ✅ Creamos una instancia del Pool de PostgreSQL con tipos claros
+// ✅ Configurar conexión segura para Render
 export const pool: Pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: Number(process.env.DB_PORT),
+  ssl: { rejectUnauthorized: false }, // ✅ Clave para conexión a Render
 });
 
-export async function createTables(): Promise<void> { // Declara una función asincrónica que no retorna nada (void)
-  const files: string[] = ["gamestable.sql", "seed_games.sql"]; // Declara un array de strings con tipo explícito
+export async function createTables(): Promise<void> {
+  const files: string[] = ["gamestable.sql", "seed_games.sql"];
 
-  for (const file of files) { // 'file' toma tipo string automáticamente por inferencia
+  for (const file of files) {
     try {
-      const filePath: string = path.join(__dirname, file); // 'filePath' es una string que indica la ruta del archivo
-      const sql: string = fs.readFileSync(filePath, "utf-8"); // 'sql' es una string con el contenido del archivo SQL
-      await pool.query(sql); // Ejecuta la consulta, el tipado lo proporciona pg (pool.query espera una string)
-      console.log(`✅ Archivo '${file}' ejecutado correctamente.`); // No requiere tipado, solo imprime
-    } catch (error: unknown) { // 'error' es de tipo unknown por seguridad (no asumimos que es Error)
-      if (error instanceof Error) { // Verificamos que realmente sea una instancia de Error
-        console.error(`❌ Error al ejecutar '${file}':`, error.message); // Podemos acceder a .message porque es Error
+      const filePath: string = path.resolve(__dirname, file); // ✅ Ruta relativa a carpeta sql
+      const sql: string = fs.readFileSync(filePath, "utf-8");
+      await pool.query(sql);
+      console.log(`✅ Archivo '${file}' ejecutado correctamente.`);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(`❌ Error al ejecutar '${file}':`, error.message);
       } else {
-        console.error(`❌ Error desconocido al ejecutar '${file}'.`); // Si no es Error, no accedemos a propiedades
+        console.error(`❌ Error desconocido al ejecutar '${file}'.`);
       }
     }
   }
