@@ -13,11 +13,10 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "18.19.1"
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.802.0",
-    "@types/node": "^22.15.21",
     "axios": "^1.8.4",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -37,6 +36,7 @@
     "@types/morgan": "^1.9.9",
     "@types/multer": "^1.4.12",
     "@types/multer-s3": "^3.0.3",
+    "@types/node": "^22.15.21",
     "@types/pg": "^8.11.13",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
