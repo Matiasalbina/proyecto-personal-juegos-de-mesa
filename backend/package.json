@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "18.19.1"
+  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.802.0",
     "@types/node": "^22.15.21",
