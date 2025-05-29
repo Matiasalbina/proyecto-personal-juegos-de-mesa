@@ -5,6 +5,8 @@ import path from "path";
 
 dotenv.config();
 
+const isProduction = process.env.NODE_ENV === "production"; // ← ahora sí
+
 // ✅ Configurar conexión segura para Render
 export const pool: Pool = new Pool({
   user: process.env.DB_USER,
@@ -12,7 +14,7 @@ export const pool: Pool = new Pool({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: Number(process.env.DB_PORT),
-  ssl: { rejectUnauthorized: false }, // ✅ Clave para conexión a Render
+  ssl: isProduction ? { rejectUnauthorized: false } : false,
 });
 
 export async function createTables(): Promise<void> {

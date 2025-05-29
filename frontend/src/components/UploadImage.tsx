@@ -50,6 +50,7 @@ const UploadImage = () => {
           <option value="familiares">Familiares</option>
           <option value="parties">Parties</option>
           <option value="ofertas">Ofertas</option>
+          <option value="folders">folders</option>
         </select>
       </div>
 

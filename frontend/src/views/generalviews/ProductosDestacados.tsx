@@ -18,7 +18,7 @@ const ProductosDestacados: React.FC = () => {
           <CardGames
             key={product.id}
             id={product.id}
-            image={product.image_url}
+            image={product.image}
             title={product.name}
             price={product.price}
             category={product.category} // ← agregamos esta prop

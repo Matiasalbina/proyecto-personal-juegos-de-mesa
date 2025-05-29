@@ -36,6 +36,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
     minimumFractionDigits: 0,
   }).format(price);
 
+    console.log("🖼️ Imagen recibida:", image); // ✅ AQUÍ SÍ VA
+
+
   return (
     <div className="product-card">
       {/* 🔖 Etiquetas */}

@@ -1,0 +1,40 @@
+/* 🌍 Pantallas grandes (PC y monitores grandes) */
+@media (min-width: 1200px) {
+    .folders-section {
+        background-color: #eaeaea;
+        margin-top: 0%;
+        padding-bottom: 3rem;
+    }
+
+    .euro-titulo-destacados {
+        text-align: center;
+        padding: 1.5rem;
+        color: #000000;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .folders-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .filtros-folders {
+        gap: 1rem;
+        display: flex;
+    }
+
+    .filtros-folders input {
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .contador-juegos {
+        font-weight: bold;
+        color: #000000;
+    }
+
+}

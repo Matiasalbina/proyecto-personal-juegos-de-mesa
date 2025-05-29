@@ -15,6 +15,9 @@ const EuroGames: React.FC = () => {
     )
     .filter((product) => product.price <= maxPrice);
 
+    console.log("🔎 Producto completo:", eurogames);
+
+
   return (
     <section className="eurogames-section">
       {/* Título y filtros alineados en flex */}
@@ -43,7 +46,7 @@ const EuroGames: React.FC = () => {
           <CardGames
             key={product.id}
             id={product.id}
-            image={product.image_url}
+            image={product.image}
             title={product.name}
             price={product.price}
             category={product.category}

@@ -42,7 +42,7 @@ const GameDetail = () => {
 
       <div className="game-detail">
         <div className="game-image">
-          <img src={game.image_url} alt={game.name} />
+          <img src={game.image} alt={game.name} />
           <div className="detail-game">
             <h2>{game.name}</h2>
             <strong>${game.price.toLocaleString("es-CL")}</strong>

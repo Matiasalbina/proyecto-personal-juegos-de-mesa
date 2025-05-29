@@ -106,6 +106,14 @@ VALUES
   'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/parties/1747241296611-tierlist.jpg',
   ARRAY['parties', 'novedad'],
   2
+),
+(
+  'BiTOKU FOLDER',
+  22990,
+  'Inserto oficial a todo color compatible con Bitoku. El diseño proporciona un almacenamiento eficiente y un juego mejorado. Muchas de las bandejas se pueden utilizar durante el juego y son de gran ayuda en los tiempos de preparación y limpieza. Las reglas y los tableros actúan como una tapa sobre las bandejas.',
+  'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/folders/1748552755040-bitoku-organizador.jpg',
+  ARRAY['folders'],
+  5
 );
 
 
