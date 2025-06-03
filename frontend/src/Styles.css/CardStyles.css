@@ -2,7 +2,7 @@
   position: relative;
   /* Necesario para posicionar .badge dentro */
   width: 100%;
-  max-width: 250px;
+  max-width: auto;
   /* Limita el ancho */
   border: 1px solid #ccc;
   padding: 0.5rem;
