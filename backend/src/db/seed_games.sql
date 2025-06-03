@@ -114,6 +114,14 @@ VALUES
   'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/folders/1748552755040-bitoku-organizador.jpg',
   ARRAY['folders'],
   5
+),
+(
+  'NUCLEUM FOLDER',
+  25990,
+  'Los Insertos Folded Space tienen un diseño que proporciona un almacenamiento eficiente y un juego mejorado. Muchas de las bandejas se pueden utilizar durante el juego y son de gran ayuda en los tiempos de preparación y limpieza.',
+  'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/folders/1748619931354-organizador-a-color-nucleum-folded-space.jpg',
+  ARRAY['folders', 'novedad'],
+  5
 );
 
 

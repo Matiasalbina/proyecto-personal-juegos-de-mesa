@@ -1,25 +1,28 @@
 import React from "react";
+import { useProducts } from "../context/productContext";
 import "../Styles.css/CarouselStyle.css";
 
-// Importamos las imágenes como módulos (TypeScript lo permite si tienes `resolveJsonModule` o soporte para imágenes)
-import bitoku from "../assets/bitoku_prueba.jpg";
-import daitoshi from "../assets/daitoshi.jpg";
-import foreverHome from "../assets/forever-home.jpg";
-
-// No recibe props, por lo tanto no necesita interfaz
 const CarouselGames: React.FC = () => {
+  const products = useProducts();
+
+  // 🔎 Filtramos los productos con categoría "novedad" o "destacado"
+  const featuredOrNew = products.filter(product =>
+    product.category.includes("novedad") || product.category.includes("destacado")
+  );
+
+  // 🔀 Mezclamos aleatoriamente y mostramos 5
+  const images = [...featuredOrNew]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 5);
+
   return (
     <div className="custom-carousel">
       <div className="carousel-track">
-        <div className="carousel-slide">
-          <img src={bitoku} alt="Bitoku" />
-        </div>
-        <div className="carousel-slide">
-          <img src={daitoshi} alt="Daitoshi" />
-        </div>
-        <div className="carousel-slide">
-          <img src={foreverHome} alt="Forever Home" />
-        </div>
+        {images.map((product, index) => (
+          <div className="carousel-slide" key={index}>
+            <img src={product.image} alt={product.name} />
+          </div>
+        ))}
       </div>
     </div>
   );
