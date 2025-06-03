@@ -22,7 +22,7 @@ export async function createTables(): Promise<void> {
 
   for (const file of files) {
     try {
-      const filePath: string = path.resolve(__dirname,"db", file); // ✅ Ruta relativa a carpeta sql
+      const filePath: string = path.resolve(__dirname, file); // ✅ Ruta relativa a carpeta sql
       const sql: string = fs.readFileSync(filePath, "utf-8");
       await pool.query(sql);
       console.log(`✅ Archivo '${file}' ejecutado correctamente.`);
