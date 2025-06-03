@@ -29,6 +29,7 @@ export async function createTables(): Promise<void> {
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error(`❌ Error al ejecutar '${file}':`, error.message);
+        console.error("Detalle completo:", error);
       } else {
         console.error(`❌ Error desconocido al ejecutar '${file}'.`);
       }
