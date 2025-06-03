@@ -5,15 +5,9 @@ import path from "path";
 
 dotenv.config();
 
-const isProduction = process.env.NODE_ENV === "production"; // ← ahora sí
-
-// ✅ Configurar conexión segura para Render
+// ✅ Crear conexión usando solo DATABASE_URL
 export const pool: Pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
-  port: Number(process.env.DB_PORT),
+  connectionString: process.env.DATABASE_URL,
   ssl: process.env.DB_SSL === "true" ? { rejectUnauthorized: false } : false,
 });
 
@@ -22,7 +16,7 @@ export async function createTables(): Promise<void> {
 
   for (const file of files) {
     try {
-      const filePath: string = path.resolve(__dirname, file); // ✅ Ruta relativa a carpeta sql
+      const filePath: string = path.resolve(__dirname, file); // ✅ Ruta relativa desde dist/db
       const sql: string = fs.readFileSync(filePath, "utf-8");
       await pool.query(sql);
       console.log(`✅ Archivo '${file}' ejecutado correctamente.`);
