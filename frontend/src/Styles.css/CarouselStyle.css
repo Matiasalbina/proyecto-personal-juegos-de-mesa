@@ -8,7 +8,7 @@
     overflow: hidden;
     margin-bottom: 0;
     padding-bottom: 0;
-    
+
 }
 
 .carousel-track {
@@ -23,6 +23,8 @@
     flex-direction: row;
     justify-content: center;
     height: 400px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .carousel-slide img {
@@ -30,13 +32,15 @@
     max-height: 400px;
     object-fit: contain;
     display: block;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .carousel-loop-container {
     z-index: 0 !important;
-  }
-  
-  
+}
+
+
 
 /* 🎞 Animación de desplazamiento automático */
 @keyframes slide {
@@ -77,11 +81,12 @@
     }
 
     .custom-carousel {
-        z-index: 0 !important; /* 🔧 fuerza que esté atrás */
+        z-index: 0 !important;
+        /* 🔧 fuerza que esté atrás */
         position: relative;
-      }
+    }
 
-    
+
 }
 
 /* 💻 Escritorio (1200px en adelante) */
