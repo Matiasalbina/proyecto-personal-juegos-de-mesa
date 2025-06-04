@@ -65,10 +65,8 @@
     .breadcrumb {
         display: flex;
         justify-content: center;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding: 2rem;
         font-size: large;
-        gap: 1rem;
         color: #000000;
     }
 
