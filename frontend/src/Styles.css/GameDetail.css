@@ -42,8 +42,14 @@
     .body-detail {
         color: #000000;
         word-break: break-word;
-        white-space: pre-line;
-        width: auto;
+        white-space: normal;
+        width: 100%;
+        padding: 0 1rem;
+        /* agrega algo de espacio lateral */
+        font-size: 1rem;
+        /* asegúrate que sea legible en pantallas pequeñas */
+        line-height: 1.5;
+        /* mejora legibilidad */
     }
 
     .body-detail strong {
@@ -85,7 +91,7 @@
         align-items: center;
         margin: 0 auto;
         background-color: #eaeaea;
-        
+
 
     }
 
@@ -196,7 +202,7 @@
 
         word-break: break-word;
         white-space: pre-line;
-        color:#333333;
+        color: #333333;
     }
 
     .body-detail h3 {
