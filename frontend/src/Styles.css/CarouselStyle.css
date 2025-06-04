@@ -6,7 +6,9 @@
     /* Vista móvil */
     margin: auto;
     overflow: hidden;
-    
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: #eaeaea;
 }
 
 .carousel-track {
