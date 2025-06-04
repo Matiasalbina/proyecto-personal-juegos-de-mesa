@@ -1,7 +1,7 @@
 .product-card {
   position: relative;
   /* Necesario para posicionar .badge dentro */
-  width: 100%;
+  width: auto;
   max-width: auto;
   /* Limita el ancho */
   border: 1px solid #ccc;
