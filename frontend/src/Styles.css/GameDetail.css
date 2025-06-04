@@ -65,7 +65,7 @@
     .breadcrumb {
         display: flex;
         justify-content: center;
-        padding: 2rem;
+        padding: 1rem;
         font-size: large;
         color: #000000;
     }
