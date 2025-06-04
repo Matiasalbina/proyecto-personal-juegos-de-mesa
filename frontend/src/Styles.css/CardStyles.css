@@ -28,12 +28,11 @@
 
 .product-info h3 {
   margin-top: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #000000;
   border-top: #ccc 1px solid;
   padding-top: 0.5rem;
   height: 3rem;
-  color: #4d4c4c;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
