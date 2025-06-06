@@ -1,7 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -82,21 +82,23 @@
         height: 400px;
         width: 100%;
         background-color: #eaeaea;
-    }
-
-    .carousel-slide img {
-        max-width: 400px;
-        max-height: 400px;
-        object-fit: contain;
-        display: block;
-    }
-
-    .custom-carousel {
         z-index: 0 !important;
         /* 🔧 fuerza que esté atrás */
         position: relative;
     }
 
+    .carousel-slide img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+        display: block;
+        border-radius: 12px;
+    }
+
+    .carousel-slide {
+        background-color: #eaeaea;
+
+    }
 
 }
 
@@ -106,6 +108,8 @@
         height: 80%;
         max-width: 80%;
         background-color: white;
+        margin-top: 2rem;
+        margin: 0 auto;
         margin-top: 2rem;
     }
 
