@@ -66,11 +66,17 @@
     .accordion-content ul {
         list-style: none;
         padding-left: 0;
-        margin-top: 10px;
+        background-color: #eaeaea;
+        border-radius: 5px;
     }
 
     .accordion-content li {
-        margin: 5px 0;
+        padding: 0.5rem;
+    }
+
+    .accordion-content ul li a {
+        color: black;
+        
     }
 
     .productos ul {
@@ -211,11 +217,22 @@
     .accordion-content ul {
         list-style: none;
         padding-left: 0;
-        margin-top: 10px;
+        border-radius: 5px;
+        background-color: #eaeaea;
     }
 
-    .accordion-content li {
-        margin: 5px 0;
+    .accordion-content ul li {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .accordion-content li:hover {
+        background-color: #3CB371;
+        transform: translateY(0);
+    }
+
+    .accordion-content ul li a {
+        color: black;
     }
 
     .productos ul {

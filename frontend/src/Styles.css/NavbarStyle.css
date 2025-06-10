@@ -372,7 +372,7 @@
     }
 
     .list li:hover {
-        background-color: #3CB371;
+        background-color: #becac4;
         transform: translateY(0);
         /* ✅ Evita que se mueva */
     }

@@ -191,6 +191,7 @@
     .detail-game {
         display: flex;
         flex-direction: column;
+        color: #000000;
     }
 
     .detail-game strong {
@@ -228,6 +229,7 @@
         padding-top: 2rem;
         font-size: large;
         gap: 1rem;
+        color: #000000;
     }
 
     .breadcrumb a {
