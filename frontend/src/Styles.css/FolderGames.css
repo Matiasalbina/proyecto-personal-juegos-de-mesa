@@ -23,6 +23,7 @@
     .filtros-folders {
         gap: 1rem;
         display: flex;
+        flex-direction: column;
     }
 
     .filtros-folders input {
