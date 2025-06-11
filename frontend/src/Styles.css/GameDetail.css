@@ -45,6 +45,11 @@
         width: auto;
     }
 
+    .detail-game strong {
+        font-size: 2rem;
+        color: #5e4b8b;
+    }
+
     .body-detail {
         color: #000000;
         word-break: break-word;
