@@ -11,6 +11,7 @@ import React from "react"; // ✅ Import necesario para TSX
 import AdminPanel from "./views/AdminPanel";
 import GameDetail from "./views/generalviews/GameDetail";
 import Footer from "./views/generalviews/Footer";
+import Login from "./views/userviews/LoginRegister";
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <Route path="parties" element={<Parties />} />
           <Route path="accesorios" element={<Folders />} />
           <Route path="admin" element={<AdminPanel />} />{" "}
+          <Route path="/login" element={<Login />} />
           {/* ← Aquí lo agregas */}
         </Routes>
       </main>

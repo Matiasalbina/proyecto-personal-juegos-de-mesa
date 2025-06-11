@@ -45,13 +45,20 @@
         padding: 1rem;
     }
 
+    .principal-menu button {
+        background-color: white;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
     .menu-toggle {
         padding: 1rem;
     }
 
     .list {
         display: none;
-        background-color: #39D353;
+        border-radius: 5px;
+        background-color: #eaeaea;
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease-in-out;
@@ -65,9 +72,9 @@
     .list li {
         list-style: none;
         padding: 1rem;
-        border-bottom: #000000 1px solid;
+        border-bottom: #898a89 1px solid;
         font-weight: bold;
-        font-size: medium;
+        font-size: larger;
         color: black;
     }
 
@@ -86,9 +93,9 @@
 
     /* Quita el borde de los elementos dentro del dropdown */
     .dropdown-menu li {
-        border-bottom: none;
-        border-top: #000000 1px solid;
-        background-color: white;
+        border-top: #898a89 1px solid;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
     }
 
     .dropdown-menu a {
@@ -166,9 +173,9 @@
     .list {
         display: none;
         width: 200px;
-        background-color: #39D353;
+        background-color: #eaeaea;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        border-radius: 3px;
+        border-radius: 5px;
         transition: opacity 0.3s ease, transform 0.3s ease-in-out;
         transform: translateY(-10px);
         opacity: 0;
@@ -203,16 +210,16 @@
         color: rgb(0, 0, 0);
         font-weight: bold;
         transition: background 0.3s;
-        border-bottom: #ffffff 1px solid;
+        border-bottom: #898a89 1px solid;
         font-size: large;
 
     }
 
     /* Quita el borde de los elementos dentro del dropdown */
     .dropdown-menu li {
-        border-bottom: none;
-        border-top: #000000 1px solid;
+        border-top: #898a89 1px solid;
         background-color: white;
+        border-radius: 5px;
 
     }
 
@@ -315,7 +322,24 @@
 
     .user-cart-icons span {
         color: black;
+
+
     }
+
+    .user-cart-icons .login-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: black;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .user-cart-icons .login-link svg {
+        font-size: 1.5rem;
+    }
+
+
 
     .principal-menu {
         background-color: #5e4b8b;
@@ -372,7 +396,7 @@
     }
 
     .list li:hover {
-        background-color: #becac4;
+        background-color: #3CB371;
         transform: translateY(0);
         /* ✅ Evita que se mueva */
     }

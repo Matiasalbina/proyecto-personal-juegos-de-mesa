@@ -1,0 +1,272 @@
+@media (max-width: 768px) {
+    .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: #eaeaea;
+    }
+
+    .login-title {
+        color: black;
+        padding: 1rem;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        background-color: #5e4b8b;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-radius: 5px;
+    }
+
+    .user-email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-email input {
+        width: 100%;
+        /* Para que ocupen todo el ancho del contenedor padre */
+        padding: 0.5rem;
+        /* Para espacio interno */
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        /* Importante para que el padding no rompa el ancho */
+    }
+
+    .user-password input {
+        width: 100%;
+        /* Para que ocupen todo el ancho del contenedor padre */
+        padding: 0.5rem;
+        /* Para espacio interno */
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        flex: 1;
+    }
+
+    .user-password {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-password button {
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+
+    .show-password {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .login-form button {
+        padding: 0.5rem;
+    }
+
+    .forgot-password-link {
+        text-align: center;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+
+    .user-register {
+        text-align: center;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+        .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: #eaeaea;
+    }
+
+    .login-title {
+        color: black;
+        padding: 1rem;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        background-color: #5e4b8b;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-radius: 5px;
+    }
+
+    .user-email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-email input {
+        width: 100%;
+        /* Para que ocupen todo el ancho del contenedor padre */
+        padding: 0.5rem;
+        /* Para espacio interno */
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        /* Importante para que el padding no rompa el ancho */
+    }
+
+    .user-password input {
+        width: 100%;
+        /* Para que ocupen todo el ancho del contenedor padre */
+        padding: 0.5rem;
+        /* Para espacio interno */
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        flex: 1;
+    }
+
+    .user-password {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-password button {
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+
+    .show-password {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .login-form button {
+        padding: 0.5rem;
+    }
+
+    .forgot-password-link {
+        text-align: center;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+
+    .user-register {
+        text-align: center;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+}
+
+
+@media (min-width: 1200px) {
+        .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background-color: #eaeaea;
+    }
+
+    .login-title {
+        color: black;
+        padding: 1rem;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        background-color: #5e4b8b;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-radius: 5px;
+    }
+
+    .user-email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-email input {
+        width: 100%;
+        /* Para que ocupen todo el ancho del contenedor padre */
+        padding: 0.5rem;
+        /* Para espacio interno */
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        /* Importante para que el padding no rompa el ancho */
+    }
+
+    .user-password input {
+        width: 100%;
+        /* Para que ocupen todo el ancho del contenedor padre */
+        padding: 0.5rem;
+        /* Para espacio interno */
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        flex: 1;
+    }
+
+    .user-password {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-password button {
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+
+    .show-password {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .login-form button {
+        padding: 0.5rem;
+    }
+
+    .forgot-password-link {
+        text-align: center;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+
+    .user-register {
+        text-align: center;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+}

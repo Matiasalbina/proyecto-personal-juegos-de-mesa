@@ -1,14 +1,19 @@
 import React from "react";
 import CarouselGames from "../../components/CarouselGames";
 import ProductosDestacados from "./ProductosDestacados";
-import Footer from "./Footer";
+import Novedades from "./Novedades";
 
 // ✅ Componente funcional tipado
 const Home: React.FC = () => {
   return (
     <div>
       <CarouselGames />
-      <ProductosDestacados />
+      <section id="productos-destacados">
+        <ProductosDestacados />
+      </section>
+      <section id="novedades">
+        <Novedades />
+      </section>
     </div>
   );
 };

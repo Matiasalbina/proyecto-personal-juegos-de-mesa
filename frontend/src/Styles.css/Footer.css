@@ -72,6 +72,7 @@
 
     .accordion-content li {
         padding: 0.5rem;
+        color: black;
     }
 
     .accordion-content ul li a {
@@ -135,7 +136,7 @@
 
     .tienda a {
         text-decoration: none;
-        color: white;
+        
     }
 
 
@@ -224,6 +225,7 @@
     .accordion-content ul li {
         margin: 0;
         padding: 0.5rem;
+        color: black;
     }
 
     .accordion-content li:hover {
@@ -291,7 +293,6 @@
 
     .tienda a {
         text-decoration: none;
-        color: white;
     }
 }
 

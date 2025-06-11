@@ -54,10 +54,14 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
         <div className="user-cart-icons">
-          <a href="/login" aria-label="Iniciar sesión o crear cuenta">
+          <Link
+            to="/login"
+            aria-label="Iniciar sesión o crear cuenta"
+            className="login-link"
+          >
             <FaUser title="Iniciar sesión / Crear cuenta" />
-          </a>
-          <span>Inicio Sesión</span>
+            <span>Inicio Sesión</span>
+          </Link>
           <a href="/cart" aria-label="Ir al carrito de compras">
             <FaShoppingCart title="Carrito de compras" />
           </a>
@@ -180,8 +184,29 @@ const Navbar: React.FC = () => {
             </li>
 
             <li onClick={() => setIsMenuOpen(false)}>Ofertas</li>
-            <li onClick={() => setIsMenuOpen(false)}>Productos Destacados</li>
-            <li onClick={() => setIsMenuOpen(false)}>Novedades</li>
+            <li
+              onClick={() => {
+                setIsMenuOpen(false);
+                const section = document.getElementById("productos-destacados");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Productos Destacados
+            </li>
+
+            <li
+              onClick={() => {
+                setIsMenuOpen(false);
+                const section = document.getElementById("novedades");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Novedades
+            </li>
             <li onClick={() => setIsMenuOpen(false)}>Nuestro Blog</li>
           </ul>
         </div>
