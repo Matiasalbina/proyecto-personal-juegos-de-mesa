@@ -34,13 +34,16 @@ El objetivo principal es crear una plataforma escalable y moderna para presentar
 
 ## 🖼️ (3 Tipos de vista)
 -Primera Vista Desktop
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/d4aec07d-8a03-482f-811c-34f2aa72bac7)
+
 
 -Segunda Vista Tablet
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/d6e787f8-ebe3-430c-b5e8-0d29d3e25a33)
+
 
 -Tercera vista Mobile
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/4c8ad727-8b08-48a3-a65e-935af8cf829b)
+
 
 ## 🖼️ Sección de Productos Destacados (Renderizado con imágenes desde AWS S3)
 
