@@ -45,6 +45,15 @@ El objetivo principal es crear una plataforma escalable y moderna para presentar
 ![image](https://github.com/user-attachments/assets/4c8ad727-8b08-48a3-a65e-935af8cf829b)
 
 
+-Vista de sección Eurogames
+![image](https://github.com/user-attachments/assets/80fff0d3-c73d-40a9-81cc-6264542d694b)
+
+
+-Vista de un juego con mas detalles
+![image](https://github.com/user-attachments/assets/15f51a26-e562-4e24-9a71-0597aa0287ff)
+
+
+
 ## 🖼️ Sección de Productos Destacados (Renderizado con imágenes desde AWS S3)
 
 ![alt text](image-8.png)
