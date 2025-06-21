@@ -12,6 +12,8 @@ import AdminPanel from "./views/AdminPanel";
 import GameDetail from "./views/generalviews/GameDetail";
 import Footer from "./views/generalviews/Footer";
 import Login from "./views/userviews/LoginRegister";
+import Register from "./views/userviews/UserRegister";
+import ForgotPassword from "./views/userviews/ForgotPassword";
 
 const App: React.FC = () => {
   return (
@@ -30,6 +32,9 @@ const App: React.FC = () => {
           <Route path="accesorios" element={<Folders />} />
           <Route path="admin" element={<AdminPanel />} />{" "}
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+
           {/* ← Aquí lo agregas */}
         </Routes>
       </main>

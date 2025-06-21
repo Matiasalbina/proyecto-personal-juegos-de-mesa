@@ -5,6 +5,7 @@ import App from "./App";
 import "./index.css";
 import { ImageUploadProvider } from "./context/ImageUploadContext";
 import { ProductProvider } from "./context/productContext"; // 👈 importa el nuevo provider
+import { AuthProvider } from "./context/AuthContext";
 
 const rootElement = document.getElementById("root");
 
@@ -15,10 +16,12 @@ if (!rootElement) {
 createRoot(rootElement).render(
   <React.StrictMode>
     <ImageUploadProvider>
-      <ProductProvider> {/* 👈 Añadido aquí */}
+      <ProductProvider>
+        <AuthProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
+        </AuthProvider>
       </ProductProvider>
     </ImageUploadProvider>
   </React.StrictMode>

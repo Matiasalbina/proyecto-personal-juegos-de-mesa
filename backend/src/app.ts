@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import productsRoutes from "./routes/productsRoutes";
 import uploadRoutes from "./routes/uploadRoutes";
+import userRoutes from "./routes/userRoutes";
 
 const app = express();
 
@@ -28,5 +29,6 @@ app.use(express.json());
 // Rutas
 app.use("/products", productsRoutes);
 app.use("/api", uploadRoutes);
+app.use('/api/users', userRoutes);
 
 export default app;

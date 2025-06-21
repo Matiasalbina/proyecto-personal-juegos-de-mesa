@@ -12,7 +12,7 @@ export const pool: Pool = new Pool({
 });
 
 export async function createTables(): Promise<void> {
-  const files: string[] = ["gamestable.sql", "seed_games.sql"];
+  const files: string[] = ["gamestable.sql", "seed_games.sql", "userstable.sql"];
 
   for (const file of files) {
     try {

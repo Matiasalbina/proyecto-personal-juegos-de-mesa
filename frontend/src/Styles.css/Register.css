@@ -1,0 +1,82 @@
+@media (min-width: 1200px) {
+  .register {
+    padding-bottom: 3rem;
+  }
+
+  .register-form {
+    background-color: #5e3b91;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    color: white;
+  }
+
+  .register-title {
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    color: black;
+  }
+
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .user-email,
+  .user-password {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .show-password {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .login-button {
+    background-color: #eaeaea;
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .register-link {
+    text-align: center;
+    margin-top: 15px;
+
+  }
+
+  .register-link a {
+    color: white;
+    text-decoration: none;
+    /* quita la línea debajo */
+  }
+
+  .login-link a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .show-password button {
+    height: 100%;
+    padding: 10px;
+    /* puedes ajustar si es necesario */
+    font-weight: bold;
+    border: none;
+    background-color: #eaeaea;
+    cursor: pointer;
+  }
+}
