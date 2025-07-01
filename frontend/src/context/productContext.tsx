@@ -1,5 +1,11 @@
 // src/context/productContext.tsx
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react";
 import axios from "axios";
 
 // Tipado del producto
@@ -21,7 +27,8 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/products')
+    axios
+      .get(`${import.meta.env.VITE_API_URL}/products`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error cargando productos:", err));
   }, []);
