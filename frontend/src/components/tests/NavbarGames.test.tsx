@@ -1,10 +1,20 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { AuthProvider } from "../../context/AuthContext"; // 👈 Importa tu AuthProvider
 import Navbar from "../NavbarGames";
 
 describe("NavbarGames", () => {
+  const customRender = (ui: React.ReactElement) =>
+    render(ui, {
+      wrapper: ({ children }) => (
+        <AuthProvider>
+          <MemoryRouter>{children}</MemoryRouter>
+        </AuthProvider>
+      ),
+    });
+
   it("debe abrir y cerrar el menú al hacer clic en el botón", () => {
-    render(<Navbar />, { wrapper: MemoryRouter });
+    customRender(<Navbar />);
 
     const toggleBtn = screen.getByRole("button");
     fireEvent.click(toggleBtn);
@@ -17,7 +27,7 @@ describe("NavbarGames", () => {
   });
 
   it("debe mostrar el dropdown de 'Juegos de Mesa' al hacer hover", () => {
-    render(<Navbar />, { wrapper: MemoryRouter });
+    customRender(<Navbar />);
 
     const juegosDeMesa = screen.getByText("Juegos de Mesa");
     fireEvent.mouseEnter(juegosDeMesa);
@@ -26,22 +36,19 @@ describe("NavbarGames", () => {
     expect(screen.getByText("Familiares")).toBeInTheDocument();
     expect(screen.getByText("Parties")).toBeInTheDocument();
   });
+
   it("debe abrir y cerrar el dropdown de 'Juegos de Mesa' al hacer clic", () => {
-    render(<Navbar />, { wrapper: MemoryRouter });
-  
-    // Abre el menú principal primero
+    customRender(<Navbar />);
+
     const toggleBtn = screen.getByRole("button");
     fireEvent.click(toggleBtn);
-  
+
     const juegosDeMesaToggle = screen.getByText("Juegos de Mesa");
-  
-    // Primer clic: se abre
+
     fireEvent.click(juegosDeMesaToggle);
     expect(screen.getByText("Eurogames")).toBeInTheDocument();
-  
-    // Segundo clic: se cierra
+
     fireEvent.click(juegosDeMesaToggle);
     expect(screen.queryByText("Eurogames")).not.toBeInTheDocument();
   });
-  
 });
