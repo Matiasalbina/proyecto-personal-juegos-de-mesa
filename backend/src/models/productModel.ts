@@ -8,6 +8,8 @@ export interface Product {
   price: number; // Precio del producto
   image: string; // Ruta de la imagen (no se guarda la imagen, solo el enlace)
   category: string[]; // Categorías en un array (por ejemplo: ["eurogames", "destacado"])
+  on_sale: boolean; // ✅ nuevo campo
+  discount_percent: number; // ✅ nuevo campo
 }
 
 // ✅ Función que obtiene todos los productos desde la tabla "products"
@@ -22,7 +24,9 @@ export async function getAllProducts(): Promise<Product[]> {
     price,
     image_url AS image,
     category,
-    stock
+    stock,
+    on_sale,
+    discount_percent
   FROM products
 `);
 
@@ -50,6 +54,32 @@ export async function getProductsByCategory(
       `❌ Error al obtener productos por categoría (${category}):`,
       error
     ); // Muestra el error con contexto
+    throw error;
+  }
+}
+
+// ✅ Nueva función: obtiene solo productos en oferta
+export async function getOfferProducts(): Promise<Product[]> {
+  try {
+    const result = await pool.query<Product>(`
+      SELECT
+        id,
+        name,
+        description,
+        price,
+        image_url AS image,
+        category,
+        stock,
+        on_sale,
+        discount_percent,
+        ROUND(price * (1 - discount_percent / 100.0)) AS final_price -- 👈 calcula precio final
+      FROM products
+      WHERE on_sale = true
+    `);
+
+    return result.rows;
+  } catch (error: unknown) {
+    console.error("❌ Error al obtener productos en oferta:", error);
     throw error;
   }
 }

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "../Styles.css/NavbarStyle.css";
 import {
   FaInstagram,
@@ -7,6 +9,7 @@ import {
   FaDiceD20,
   FaUsers,
   FaGlassCheers,
+  FaPowerOff,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -16,6 +19,14 @@ type DropdownType = "Juegos de Mesa" | "Accesorios" | false;
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // ← Tipado booleano
   const [isDropdownOpen, setIsDropdownOpen] = useState<DropdownType>(false); // ← Tipo personalizado para más claridad
+
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/"); // Redirige al Home después de cerrar sesión
+  };
 
   useEffect(() => {
     // Función que cierra el menú si se hace clic fuera
@@ -54,17 +65,27 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
         <div className="user-cart-icons">
-          <Link
-            to="/login"
-            aria-label="Iniciar sesión o crear cuenta"
-            className="login-link"
-          >
-            <FaUser title="Iniciar sesión / Crear cuenta" />
-            <span>Inicio Sesión</span>
-          </Link>
-          <a href="/cart" aria-label="Ir al carrito de compras">
+          {user ? (
+            <>
+              <FaUser />
+              <span>Hola, {user.name}</span>
+              <a className="logout-icon" onClick={handleLogout}>
+                <FaPowerOff />
+              </a>
+            </>
+          ) : (
+            <Link
+              to="/login"
+              aria-label="Iniciar sesión o crear cuenta"
+              className="login-link"
+            >
+              <FaUser title="Iniciar sesión / Crear cuenta" />
+              <span>Inicio Sesión</span>
+            </Link>
+          )}
+          <Link to="/cart" aria-label="Ir al carrito de compras">
             <FaShoppingCart title="Carrito de compras" />
-          </a>
+          </Link>
           <span>Carrito</span>
         </div>
       </div>
@@ -183,7 +204,9 @@ const Navbar: React.FC = () => {
               )}
             </li>
 
-            <li onClick={() => setIsMenuOpen(false)}>Ofertas</li>
+            <Link to="ofertas" onClick={() => setIsMenuOpen(false)}>
+              Ofertas
+            </Link>
             <li
               onClick={() => {
                 setIsMenuOpen(false);

@@ -21,6 +21,7 @@
 
     .user-cart-icons {
         display: flex;
+        align-items: center;
     }
 
     .user-cart-icons a {
@@ -28,6 +29,11 @@
         padding: 1rem;
         color: #000000;
         padding-bottom: 0;
+    }
+
+    .logout-icon {
+        color: black;
+        font-size: 2rem;
     }
 
     .user-cart-icons span {
@@ -322,8 +328,10 @@
 
     .user-cart-icons span {
         color: black;
+    }
 
-
+    .logout-icon {
+        color: black;
     }
 
     .user-cart-icons .login-link {

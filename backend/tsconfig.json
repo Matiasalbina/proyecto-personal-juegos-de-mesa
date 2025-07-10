@@ -8,8 +8,8 @@
     "strict": true,
     "skipLibCheck": true,
     "types": ["node"],
-    "forceConsistentCasingInFileNames": true,           // ✅ Agrega esta línea
-    "moduleResolution": "node"  // ✅ Opcional pero recomendado
+    "forceConsistentCasingInFileNames": true, // ✅ Agrega esta línea
+    "moduleResolution": "node" // ✅ Opcional pero recomendado
   },
   "include": ["src"]
 }

@@ -1,5 +1,11 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import axios from 'axios';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
+import axios from "axios";
 
 interface User {
   id: number;
@@ -19,25 +25,35 @@ const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
 
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
   const login = async (email: string, password: string) => {
-    const res = await axios.post('http://localhost:3000/api/users/login', {
+    const res = await axios.post("http://localhost:3000/api/users/login", {
       email,
       password,
     });
     setUser(res.data.user);
+    localStorage.setItem("user", JSON.stringify(res.data.user)); // ✅ Guarda
   };
 
   const register = async (name: string, email: string, password: string) => {
-    const res = await axios.post('http://localhost:3000/api/users/register', {
+    const res = await axios.post("http://localhost:3000/api/users/register", {
       name,
       email,
       password,
     });
     setUser(res.data.user);
+    localStorage.setItem("user", JSON.stringify(res.data.user)); // ✅ Guarda
   };
 
   const logout = () => {
     setUser(null);
+    localStorage.removeItem("user"); // ✅ Limpia
   };
 
   return (
@@ -50,7 +66,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };

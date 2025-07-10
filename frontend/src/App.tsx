@@ -14,6 +14,7 @@ import Footer from "./views/generalviews/Footer";
 import Login from "./views/userviews/LoginRegister";
 import Register from "./views/userviews/UserRegister";
 import ForgotPassword from "./views/userviews/ForgotPassword";
+import Ofertas from "./views/generalviews/Ofertas";
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="carousel" element={<CarouselGames />} />
           <Route path="eurogames" element={<EuroGames />} />
+          <Route path="ofertas" element={<Ofertas />} />
           <Route path="/juego/:id" element={<GameDetail />} />
           <Route path="familiares" element={<Familiares />} />
           <Route path="parties" element={<Parties />} />
@@ -34,8 +36,6 @@ const App: React.FC = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-
-          {/* ← Aquí lo agregas */}
         </Routes>
       </main>
       <Footer />
