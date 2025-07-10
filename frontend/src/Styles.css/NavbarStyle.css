@@ -445,9 +445,15 @@
         color: white;
     }
 
+    .oferta {
+        text-decoration: none;
+        color: white;
+    }
+
     .dropdown-menu li:hover {
         background-color: #5e4b8b;
     }
+
 
     .dropdown:hover .dropdown-menu {
         display: block;

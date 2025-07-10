@@ -50,14 +50,14 @@
 
 .price {
   display: block;
-  
+
   font-weight: bold;
   color: #b71c1c;
-  
+
 }
 
 .add-btn {
-  
+
   padding: 8px 32px;
   background-color: #5e4b8b;
   color: rgb(255, 255, 255);
@@ -88,8 +88,9 @@
 }
 
 /* Esta empuja la segunda etiqueta hacia abajo */
-.badge + .badge {
-  top: 40px; /* Ajusta este valor según el alto de la etiqueta */
+.badge+.badge {
+  top: 40px;
+  /* Ajusta este valor según el alto de la etiqueta */
 }
 
 
@@ -100,4 +101,15 @@
 
 .badge-featured {
   background-color: #f39c12;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 0.5rem;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
 }

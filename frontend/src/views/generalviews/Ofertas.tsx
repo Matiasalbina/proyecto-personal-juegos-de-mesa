@@ -57,6 +57,8 @@ const Ofertas: React.FC = () => {
               title={product.name}
               price={finalPrice} // ✅ Muestra precio con descuento
               category={product.category}
+              contextCategory="ofertas" // 🔑 Esto es CLAVE
+              discountPercent={product.discount_percent} // 🔑 Esto también
               button={<button className="add-btn">Añadir</button>}
             />
           );

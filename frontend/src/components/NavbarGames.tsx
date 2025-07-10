@@ -203,10 +203,16 @@ const Navbar: React.FC = () => {
                 </ul>
               )}
             </li>
+            <li>
+              <Link
+                to="ofertas"
+                className="oferta"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Ofertas
+              </Link>
+            </li>
 
-            <Link to="ofertas" onClick={() => setIsMenuOpen(false)}>
-              Ofertas
-            </Link>
             <li
               onClick={() => {
                 setIsMenuOpen(false);

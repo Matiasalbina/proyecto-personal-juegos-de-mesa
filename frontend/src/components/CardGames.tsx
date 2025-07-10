@@ -10,6 +10,7 @@ interface ProductCardProps {
   price: number;
   category?: string[]; // ← nueva prop opcional
   contextCategory?: string; // 👈 NUEVA PROP
+  discountPercent?: number; // 👈 Nuevo: descuento
   button?: React.ReactNode; // opcional, puede ser un botón o un link JSX
 }
 
@@ -21,7 +22,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
   category,
   contextCategory, // 👈 NUEVA PROP
-  button
+  discountPercent = 0, // Valor por defecto
+  button,
 }) => {
   const navigate = useNavigate();
 
@@ -36,8 +38,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
     minimumFractionDigits: 0,
   }).format(price);
 
-    console.log("🖼️ Imagen recibida:", image); // ✅ AQUÍ SÍ VA
-
+  // ✅ Calcula precio original solo si aplica
+  const originalPrice =
+    discountPercent > 0
+      ? new Intl.NumberFormat("es-CL", {
+          style: "currency",
+          currency: "CLP",
+          minimumFractionDigits: 0,
+        }).format(Math.round(price / (1 - discountPercent / 100)))
+      : null;
 
   return (
     <div className="product-card">
@@ -65,7 +74,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
       />
       <div className="product-info">
         <h3>{title}</h3>
-        <span className="price">{formattedPrice}</span>
+        {/* ✅ Precio con tachado solo en Ofertas */}
+        {contextCategory === "ofertas" && discountPercent > 0 ? (
+          <p>
+            <span className="original-price">{originalPrice}</span>{" "}
+            <span className="price">{formattedPrice}</span>
+          </p>
+        ) : (
+          <span className="price">{formattedPrice}</span>
+        )}
         {button}
       </div>
     </div>
