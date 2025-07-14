@@ -1,0 +1,30 @@
+.avatar-container {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 9999;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-video {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.avatar-button {
+    font-size: 12px;
+    color: blue;
+    text-decoration: underline;
+    margin-top: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
