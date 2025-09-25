@@ -15,14 +15,12 @@ import Login from "./views/userviews/LoginRegister";
 import Register from "./views/userviews/UserRegister";
 import ForgotPassword from "./views/userviews/ForgotPassword";
 import Ofertas from "./views/generalviews/Ofertas";
-import AvatarAssistant from "./components/AvatarAssistant";
 
 const App: React.FC = () => {
   return (
     <div className="container">
       <header className="header">
         <NavbarGames />
-        <AvatarAssistant />
       </header>
       <main className="main">
         <Routes>
