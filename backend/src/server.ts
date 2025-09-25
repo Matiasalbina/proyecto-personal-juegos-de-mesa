@@ -4,11 +4,12 @@ dotenv.config();
 import app from "./app";
 import { createTables } from "./db/config";
 
-const PORT = process.env.PORT || 3000;
+// 👇 Asegura number
+const PORT: number = parseInt(process.env.PORT ?? "3000", 10);
 
 async function startServer() {
   try {
-    // ⚠️ Solo ejecuta .sql si está activado
+    // Ejecutar .sql solo si lo pides explícitamente
     if (process.env.RUN_SQL === "true") {
       await createTables();
       console.log("✅ Tablas y seeds creados");
@@ -20,7 +21,7 @@ async function startServer() {
       console.log(`🚀 Servidor corriendo en http://0.0.0.0:${PORT}`);
     });
   } catch (error: any) {
-    console.error("❌ Error al iniciar el servidor:", error.message);
+    console.error("❌ Error al iniciar el servidor:", error?.message || error);
   }
 }
 
