@@ -30,7 +30,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     axios
-      .get("https://proyecto-personal-juegos-de-mesa.onrender.com")
+      .get(`${import.meta.env.VITE_API_URL}/products`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error cargando productos:", err));
   }, []);
