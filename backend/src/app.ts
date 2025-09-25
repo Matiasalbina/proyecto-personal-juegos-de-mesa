@@ -3,32 +3,21 @@ import cors from "cors";
 import productsRoutes from "./routes/productsRoutes";
 import uploadRoutes from "./routes/uploadRoutes";
 import userRoutes from "./routes/userRoutes";
+import gemini from "./routes/geminiRoutes";
+import ttsRoutes from "./routes/ttsRoutes";
 
 const app = express();
 
-// Detectar si estamos en producción
-const allowedOrigins = [
-  "http://localhost:5173", // desarrollo local
-  "https://proyecto-personal-juegos-de-mesa-frontend.onrender.com", // producción
-];
-
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("No permitido por CORS"));
-      }
-    },
-  })
-);
-
+// ✅ CORS libre (solo para desarrollo)
+app.use(cors());
 app.use(express.json());
 
-// Rutas
+// ✅ Rutas
 app.use("/products", productsRoutes);
-app.use("/api", uploadRoutes);
-app.use('/api/users', userRoutes);
+app.use("/api/upload", uploadRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/gemini", gemini);
+app.use(express.static("public"));
+app.use("/api/tts", ttsRoutes);
 
 export default app;

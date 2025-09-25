@@ -30,7 +30,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/products")
+      .get("https://proyecto-personal-juegos-de-mesa.onrender.com")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error cargando productos:", err));
   }, []);
