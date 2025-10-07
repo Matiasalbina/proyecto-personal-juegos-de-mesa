@@ -14,7 +14,7 @@ app.use(express.json());
 
 // ✅ Rutas
 app.use("/products", productsRoutes);
-app.use("/api/upload", uploadRoutes);
+app.use("/api", uploadRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/gemini", gemini);
 app.use(express.static("public"));

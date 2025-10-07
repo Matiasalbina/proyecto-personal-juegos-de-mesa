@@ -12,5 +12,6 @@ IF NOT EXISTS products
   category TEXT[],
   stock INTEGER DEFAULT 0,
   on_sale BOOLEAN DEFAULT FALSE,          -- ✅ agregado directamente
-  discount_percent INTEGER DEFAULT 0      -- ✅ agregado directamente
+  discount_percent INTEGER DEFAULT 0,
+  more_images TEXT[]
 );

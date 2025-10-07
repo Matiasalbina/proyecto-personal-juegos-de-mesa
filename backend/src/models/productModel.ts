@@ -10,6 +10,7 @@ export interface Product {
   category: string[]; // Categorías en un array (por ejemplo: ["eurogames", "destacado"])
   on_sale: boolean; // ✅ nuevo campo
   discount_percent: number; // ✅ nuevo campo
+  moreImages: string[];
 }
 
 // ✅ Función que obtiene todos los productos desde la tabla "products"
@@ -26,7 +27,8 @@ export async function getAllProducts(): Promise<Product[]> {
     category,
     stock,
     on_sale,
-    discount_percent
+    discount_percent,
+    more_images AS "moreImages"
   FROM products
 `);
 
@@ -72,6 +74,7 @@ export async function getOfferProducts(): Promise<Product[]> {
         stock,
         on_sale,
         discount_percent,
+        more_images AS "moreImages",
         ROUND(price * (1 - discount_percent / 100.0)) AS final_price -- 👈 calcula precio final
       FROM products
       WHERE on_sale = true

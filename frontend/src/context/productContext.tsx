@@ -19,6 +19,7 @@ export interface Product {
   stock: number;
   on_sale: boolean; // ✅ nuevo campo
   discount_percent: number; // ✅ nuevo campo
+  moreImages: string[]; // ✅ nuevo campo
 }
 
 // Creamos el contexto
@@ -30,7 +31,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}/products`)
+      .get("http://localhost:3000/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error cargando productos:", err));
   }, []);

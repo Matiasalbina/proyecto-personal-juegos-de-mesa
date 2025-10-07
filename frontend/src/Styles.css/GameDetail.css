@@ -290,5 +290,25 @@
         font-weight: bold;
     }
 
+    .images-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .images-container img.thumbnail {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .images-container img.thumbnail:hover {
+        transform: scale(1.05);
+    }
+
+
 
 }

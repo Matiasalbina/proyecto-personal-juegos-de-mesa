@@ -1,8 +1,11 @@
 
 DELETE FROM products;
 
+
+
+
 INSERT INTO products
-  (name, price, description, image_url, category, stock, on_sale, discount_percent)
+  (name, price, description, image_url, category, stock, on_sale, discount_percent, more_images)
 VALUES
   (
     'La Oscuridad Asfixiante',
@@ -13,7 +16,12 @@ VALUES
 ['eurogames', 'novedad']::TEXT[],
     5,
     true,
-    5
+    5,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 
 (
@@ -26,7 +34,12 @@ VALUES
     ARRAY['eurogames', 'destacado']::TEXT[],
     5,
     true,
-    5
+    5,
+    ARRAY[
+      'https://imagenes-juegos-matias.s3.us-east-2.amazonaws.com/eurogames/1759866235198-reinos-rodados-relanzados+(1).jpg',
+      '',
+      ''
+    ]::TEXT[]
   ),
 
 (
@@ -37,7 +50,12 @@ VALUES
     ARRAY['eurogames', 'novedad', 'destacado']::TEXT[],
     5,
     true,
-    5
+    5,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 
 (
@@ -48,7 +66,12 @@ VALUES
     ARRAY['eurogames', 'novedad', 'destacado']::TEXT[],
     5,
     true,
-    10
+    10,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 (
   'Daitoshi',
@@ -58,7 +81,12 @@ VALUES
     ARRAY['eurogames', 'destacado']::TEXT[],
     5,
     true,
-    10
+    10,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 (
   'Forever Home',
@@ -68,7 +96,12 @@ VALUES
     ARRAY['eurogames', 'novedad']::TEXT[],
     5,
     false,
-    0
+    0,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 (
     'exploding kittens el juego de tablero',
@@ -78,7 +111,12 @@ VALUES
     ARRAY['familiares', 'destacado']::TEXT[],
     5,
     true,
-    10
+    10,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 (
     'fritanga',
@@ -89,7 +127,12 @@ VALUES
     ARRAY['familiares', 'novedad']::TEXT[],
     5,
     true,
-    5
+    5,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 (
     'fish and katz',
@@ -99,7 +142,12 @@ VALUES
     ARRAY['familiares', 'novedad']::TEXT[],
     5,
     false,
-    0
+    0,
+    ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
   ),
 (
   '¡PAREN LA NAVE!',
@@ -109,7 +157,12 @@ VALUES
   ARRAY['parties', 'novedad']::TEXT[],
   5,
   false,
-  0
+  0,
+  ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
 ),
 (
   'PREGUNTADOS 2',
@@ -119,7 +172,12 @@ VALUES
   ARRAY['parties', 'destacado']::TEXT[],
   5,
   true,
-  20
+  20,
+  ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
 ),
 (
   'TIERLIST',
@@ -129,7 +187,12 @@ VALUES
   ARRAY['parties', 'novedad']::TEXT[],
   2,
   false,
-  0
+  0,
+  ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
 ),
 (
   'BiTOKU FOLDER',
@@ -139,7 +202,12 @@ VALUES
   ARRAY['folders']::TEXT[],
   5,
   false,
-  0
+  0,
+  ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
 ),
 (
   'NUCLEUM FOLDER',
@@ -149,7 +217,12 @@ VALUES
   ARRAY['folders', 'novedad']::TEXT[],
   5,
   false,
-  0
+  0,
+  ARRAY[
+      '',
+      '',
+      ''
+    ]::TEXT[]
 );
 
 

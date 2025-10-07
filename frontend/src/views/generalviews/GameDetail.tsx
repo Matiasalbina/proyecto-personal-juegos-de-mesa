@@ -74,6 +74,21 @@ const GameDetail = () => {
                 </p>
               )}
             </div>
+            <div className="more-images">
+              <div>
+                <h4>Más Imagenes</h4>
+                <div className="images-container">
+                  {game.moreImages?.slice(0, 4).map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt={`${game.name} ${index + 1}`}
+                      className="thumbnail"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
